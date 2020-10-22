@@ -49,7 +49,7 @@ public class InstallApp16 extends UnitFragment{
 		
 		//case1:安装apk
 		Intent intent = new Intent(Intent.ACTION_VIEW);
-		expPackName = GlobalVariable.sdPath+"LoginActivity-test1.6.7";
+		expPackName = GlobalVariable.sdPath+"LoginActivity-test1.6.7.apk";
 		intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
 		intent.setDataAndType(Uri.fromFile(new File(expPackName)),"application/vnd.android.package-archive");
 		myactivity.startActivity(intent);

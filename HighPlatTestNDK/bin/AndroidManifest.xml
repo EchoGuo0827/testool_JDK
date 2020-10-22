@@ -2,14 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.highplattest"
     android:versionCode="1"
-    android:versionName="2.0.02">
-  
-    
+    android:versionName="1.10.1"
+   
+  >
 
     <!-- android:sharedUserId="android.uid.mtms" -->
     <!-- android:sharedUserId="android.uid.system" -->
-    <uses-permission android:name="android.permission.SET_TIME"/>
-    <uses-permission android:name="android.permission.SET_TIME_ZONE"/>
     <!-- 接收开启广播权限 -->
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
  	<!-- Webview使用权限 -->
@@ -97,6 +95,9 @@
 	
 	<!-- 双屏异显 -->
 	 <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.SYSTEM_OVERLAY_WINDOW" />
+    <!-- 震动器权限 -->
     <uses-permission android:name="android.permission.VIBRATE" />
     
     
@@ -104,10 +105,6 @@
     <uses-permission android:name="android.permission.CLEAR_APP_CACHE"/>
     
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
-    
-    <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW"/>
-    
-    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
 	
     <uses-feature
         android:name="android.hardware.nfc"
@@ -161,8 +158,6 @@
         <activity android:name="com.example.highplattest.activity.WlanrebootActivity"></activity>
         <activity android:name="com.example.highplattest.activity.Wlanreboot2Activity"></activity>
         <activity android:name="com.example.highplattest.activity.M1rebootActivity"></activity>
-        <activity android:name="com.example.highplattest.activity.Touch2Activity"></activity>
-        <activity android:name="com.example.highplattest.activity.WebViewActivity3"></activity>
         <!-- 添加 -->
         <activity
             android:name="com.example.highplattest.activity.IntentActivity"
@@ -180,8 +175,8 @@
             android:name="com.example.highplattest.bluetoothbase.BluetoothBase"
             android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
         </activity>
-       <!--Android7.1.1之后才支持，测试人员在测试以上的平台再打开  -->
-    <!--    <provider
+        <!--Android7.1.1之后才支持，测试人员在测试以上的平台再打开  -->
+       <!--  <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.example.highplattest.fileprovider"
             android:exported="false"
@@ -189,7 +184,7 @@
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
-        </provider>  -->
+        </provider> -->
 
         <!-- 开机广播 -->
         <receiver android:name="com.example.highplattest.main.tools.BootBroadcastReceiver" >
@@ -198,13 +193,13 @@
             </intent-filter>
         </receiver>
         
-       	<receiver android:name="com.example.highplattest.main.tools.WifiBootBroadcastReceiver" >
+                <receiver android:name="com.example.highplattest.main.tools.WifiBootBroadcastReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
         
-       <receiver android:name="com.example.highplattest.main.tools.M1RebootBroadcastReceiver" >
+              <receiver android:name="com.example.highplattest.main.tools.M1RebootBroadcastReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
@@ -214,13 +209,6 @@
             <intent-filter >
                 <action android:name="android.intent.action.ACTION_SHUTDOWN"/>
                 <category android:name="android.intent.category.HOME"/>
-            </intent-filter>
-        </receiver>
-        
-        <!--Android199  -->
-        <receiver android:name="com.example.highplattest.android.Android199$ConnectReceiver" >
-            <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
         </receiver>
         
@@ -238,13 +226,6 @@
                 <action android:name="android.intent.action.custom.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
-        <receiver android:name="com.example.highplattest.main.tools.SimBroadcastReceiver">
-            <intent-filter>
-                 <action android:name="android.intent.sim.locked"/>
-                <action android:name="android.intent.sim.locked.result"/>
-            </intent-filter>
-            
-        </receiver>
 
         <!-- OTA升级广播 -->
         <receiver android:name="com.example.highplattest.main.tools.OtaUpdateBroadcastReceiver" >
@@ -254,8 +235,8 @@
         </receiver>
         
         <!-- 服务 -->
-        <service android:name="com.example.highplattest.activity.ServiceActivity" />
-        <service android:name="com.example.highplattest.service.FloatingButtonService"/>
+        <service android:name="com.example.highplattest.activity.ServiceActivity" >
+        </service>
         
        <service android:name="com.example.highplattest.main.tools.QuickSettingService"
            android:label="用例定义"

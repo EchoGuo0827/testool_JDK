@@ -289,6 +289,15 @@ public class BaseFragment extends Fragment implements OnClickListener,OnTouchLis
 			return NDK_ERR;
 		}
 		
+//		String touch = NlBuild.VERSION.TOUCHSCREEN_RESOLUTION;
+//		LoggerUtil.d(TAG+",touchscreen_getnum:"+touch);
+//		int index = touch.indexOf('x');
+//		// 触屏值控制
+//		touchHeight = Integer.parseInt(touch.substring(0, index));
+//		widthTap = Integer.parseInt(touch.substring(index+1))/4;
+		
+		
+		
 		heightTap = (touchHeight-GlobalVariable.StatusHeight-GlobalVariable.TitleBarHeight)/8;
 		
 		x0 = 0;x1 = widthTap;x2 = widthTap*2;x3 = widthTap*3;x4 = widthTap*4;

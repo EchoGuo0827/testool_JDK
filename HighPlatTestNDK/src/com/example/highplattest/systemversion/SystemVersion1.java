@@ -34,7 +34,6 @@ public class SystemVersion1 extends UnitFragment
 		gui.cls_show_msg("新大陆自定义接口获取到的bootloader版本，应校验与Android原生接口获取到的一致;\n没有CSN的情况下，获取SN；CSN和SN都没有的情况下，跟Android原生接口获取的一致");
 		if(GlobalVariable.gAutoFlag == ParaEnum.AutoFlag.AutoHand)
 			return;
-	
 		while(true)
 		{
 			int nKey ='0';

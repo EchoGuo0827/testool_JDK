@@ -329,28 +329,28 @@ public class SysTest103 extends DefaultFragment {
 				break;
 
 			case '1':
-				datatocmd();// 压力
+				datatocmd();
 				break;
 			case '2':
 				// usb拔插
-				usbpull();// 性能
+				usbpull();
 				break;
 
 			case '3':
-//				blconanddiscon();// 性能
+				blconanddiscon();
 				break;
 
 			case '4':
-				bluetoothrebootcon();// 性能
+				bluetoothrebootcon();
 				break;
-			case '5':// 日志功能
-				Logfunctiontest();// 已移植
+			case '5':
+				Logfunctiontest();
 				break;
 			case '6':
-				datatocmd2();// 压力
+				datatocmd2();
 				break;
 
-			case '7':// 独立apk已有
+			case '7':
 				usbFunction();// USB功能,by weimj
 				break;
 			case '8':
@@ -371,7 +371,6 @@ public class SysTest103 extends DefaultFragment {
 		}
 	}
 
-	// 独立apk已添加
 	public void wifiAPSleep() {
 		while (true) {
 			int key = gui.cls_show_msg("休眠开关测试\n0.开启休眠\n1.关闭休眠\n2.查询休眠状态");
@@ -773,6 +772,71 @@ public class SysTest103 extends DefaultFragment {
 		}
 
 		gui.cls_show_msg1_record(TAG, "Logfunctiontest", g_keeptime, "测试通过。。。。。");
+
+	}
+
+	// 模拟客户的断开连接 用燕清的aar包自动连
+	private void blconanddiscon() {
+		int cnt = 0, bak = 0, succ = 0, fail = 0;
+		float ratetime = 0;
+		float rate;
+		float endfailtime = 0;
+		int portType = 10;
+		final PacketBean packet = new PacketBean();
+		packet.setLifecycle(gui.JDK_ReadData(TIMEOUT_INPUT, getCycleValue()));
+		bak = cnt = packet.getLifecycle();// 交叉次数获取
+		// 测试前置
+		if ("".equals(nlBluetooth.getConnectedDeviceAddressA())) {
+			gui.cls_show_msg1(2, "请先进行蓝牙底座选择-配置操作,使之处于已连接状态");
+			return;
+		}
+		gui.cls_show_msg1(2, "即将进行蓝牙断开恢复测试。。。。。。。。。");
+		while (cnt > 0) {
+			cnt--;
+
+			// 断开蓝牙连接
+			gui.cls_show_msg1(3, "关闭蓝牙连接操作需要10s。。。。请耐心等待");
+			nlBluetooth.disconnect2(); // 用新的断开连接接口
+			int time = 0;
+			long outtime = System.currentTimeMillis();
+			while (time < 15) {
+				time = (int) Tools.getStopTime(outtime);
+				if (!(nlBluetooth.isConnectedA())) {
+					LogUtil.d("time" + time);
+					break;
+
+				}
+				SystemClock.sleep(10);
+			}
+			if (time >= 15) {
+				gui.cls_show_msg1_record(TAG, "blconanddiscon", g_keeptime, "line %d:本次关闭蓝牙连接失败", Tools.getLineInfo());
+				continue;
+			}
+			long starttime = System.currentTimeMillis();
+			int time2 = 0;
+			long outtime2 = System.currentTimeMillis();
+			while (time2 < 20) {
+				time2 = (int) Tools.getStopTime(outtime2);
+				if (nlBluetooth.isConnectedA()) {
+					LogUtil.d("time" + time2);
+					break;
+
+				}
+				SystemClock.sleep(10);
+
+			}
+			if (time >= 20) {
+				endfailtime = endfailtime + (System.currentTimeMillis() - starttime);
+				gui.cls_show_msg1_record(TAG, "blconanddiscon", g_keeptime, "line %d:蓝牙连接超时", Tools.getLineInfo());
+				continue;
+			}
+			long endtime = System.currentTimeMillis();
+			succ++;
+			ratetime = ratetime + (endtime - starttime);
+			gui.cls_show_msg1(2, "测试总次数为%d次，成功%d次，已执行%d次", bak, succ, bak - cnt);
+		}
+		rate = ratetime / succ;
+		gui.cls_show_msg("测试完成总次数为%d次，成功%d次,成功平均耗时%4fms,失败总耗时%4fms", bak, succ, rate, endfailtime);
 
 	}
 

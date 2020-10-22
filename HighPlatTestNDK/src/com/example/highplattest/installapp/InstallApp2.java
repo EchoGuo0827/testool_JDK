@@ -402,7 +402,7 @@ public class InstallApp2 extends UnitFragment
 				break;
 		}
 		apkReceiver.getResp(APK_INSTALL);
-		expPackName = GlobalVariable.sdPath + "apk/A2.apk";
+		expPackName = GlobalVariable.sdPath + "apk/A2_sign.apk";
 		intent.setDataAndType(Uri.fromFile(new File(expPackName)),"application/vnd.android.package-archive");
 		myactivity.startActivity(intent);
 		time = 0;

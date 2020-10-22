@@ -329,7 +329,6 @@ public class FileSystem implements NDK
 			e.printStackTrace();
 			if(randomAccessFile!=null)/**存储空间写满之后可能出现该问题*/
 				try {
-					LoggerUtil.v("close file");
 					randomAccessFile.close();
 				} catch (IOException e1) {
 					e1.printStackTrace();

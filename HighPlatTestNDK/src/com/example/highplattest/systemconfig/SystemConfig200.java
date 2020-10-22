@@ -56,7 +56,6 @@ public class SystemConfig200 extends UnitFragment{
 		case IM81_New:// 有带以太网和串口
 		case IM81_Old:
 		case N850:
-		case N850_A7:
 		case X5:
 		case X3:
 		case X1:

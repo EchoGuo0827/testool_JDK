@@ -133,7 +133,7 @@ public class Scan42 extends UnitFragment
 			gui.cls_show_msg1_record(fileName, "scan42", gKeepTimeErr, "%s用例不支持自动化测试,请手动验证", TESTITEM);
 			return;
 		}
-		gui.cls_show_msg1(2, "请先安装/SVN/Tool/Scan42=多应用初始化扫码/IndependendApkTest.apk, %s测试中", TESTITEM);				
+		gui.cls_show_msg1(2, "请先安装/SVN/Tool/部分案例APK/IndependendApkTest.apk, %s测试中", TESTITEM);				
 		String cameraMsg="USB摄像头";
 		int cameraId=-1;
 		int iRet;

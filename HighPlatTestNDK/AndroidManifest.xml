@@ -198,13 +198,13 @@
             </intent-filter>
         </receiver>
         
-       	<receiver android:name="com.example.highplattest.main.tools.WifiBootBroadcastReceiver" >
+                <receiver android:name="com.example.highplattest.main.tools.WifiBootBroadcastReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
         </receiver>
         
-       <receiver android:name="com.example.highplattest.main.tools.M1RebootBroadcastReceiver" >
+              <receiver android:name="com.example.highplattest.main.tools.M1RebootBroadcastReceiver" >
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
             </intent-filter>
@@ -214,13 +214,6 @@
             <intent-filter >
                 <action android:name="android.intent.action.ACTION_SHUTDOWN"/>
                 <category android:name="android.intent.category.HOME"/>
-            </intent-filter>
-        </receiver>
-        
-        <!--Android199  -->
-        <receiver android:name="com.example.highplattest.android.Android199$ConnectReceiver" >
-            <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
         </receiver>
         

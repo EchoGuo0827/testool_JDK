@@ -32,7 +32,7 @@ public class AndroidPort6 extends UnitFragment
 	private NLUART3Manager mPinPadManager = null;
 	/*------------global variables definition-----------------------*/
 	private final String CLASS_NAME = AndroidPort1.class.getSimpleName();
-	private String TESTITEM = "多串口异常测试";
+//	private String TESTITEM = "多串口异常测试";
 	
 	Handler myHandler = new Handler()
 	{

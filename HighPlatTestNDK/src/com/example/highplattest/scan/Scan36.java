@@ -37,7 +37,7 @@ import com.example.highplattest.main.tools.Tools;
  ************************************************************************/
 public class Scan36 extends UnitFragment
 {
-	private final String TESTITEM =  "(SoftEngine+Camera1)scanSet+QR";
+	private final String TESTITEM =  "(SoftEngine+Camera1)scanSet";
 	private String fileName=Scan36.class.getSimpleName();
 	private Gui gui = new Gui(myactivity, handler);
 	private final int  SCAN_TIMEOUT = 15*1000;

@@ -42,7 +42,7 @@ import com.newland.ndk.SecKcvInfo;
  ************************************************************************/
 public class SysTest81 extends DefaultFragment
 {
-	private final String TESTITEM = "休眠/密钥安装并发";
+	private final String TESTITEM = "农行客诉问题复现";
 	private final String TAG = SysTest81.class.getSimpleName();
 	SecKcvInfo kcvInfo = new SecKcvInfo();
 	ScanUtil softManager1;

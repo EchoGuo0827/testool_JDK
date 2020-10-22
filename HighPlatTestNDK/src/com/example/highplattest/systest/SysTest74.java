@@ -2338,7 +2338,6 @@ public class SysTest74 extends DefaultFragment /* implements OnDataReceiveListen
 		final StringBuffer macAddr = new StringBuffer();
 		StringBuffer baiduIpAddr = new StringBuffer();
 		StringBuffer isConnected = new StringBuffer();
-		
 
 		/* process body */
 		if ("".equals(nlBluetooth.getConnectedDeviceAddressA())) {

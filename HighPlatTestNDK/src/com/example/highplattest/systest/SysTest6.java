@@ -35,9 +35,8 @@ import android.net.ConnectivityManager;
  * related document :
  * history 		 	: author			date			remarks
  * history 		 	: 变更点										     变更人员				变更时间
- * 					  N850 F10   以太网打开1  关闭-1  状态未知返回0  				陈丁		20200602
+ * 					  N850 F10   以太网打开1  关闭-1  状态未知返回0  				陈丁			  20200602
  * 					  F7以太网状态值修改								陈丁					20200710
- *					  以太网的开关操作与设置不同，开关后要重启			陈丁					20201022
  * 
  ************************************************************************ 
  * log : Revision no message(created for Android platform)

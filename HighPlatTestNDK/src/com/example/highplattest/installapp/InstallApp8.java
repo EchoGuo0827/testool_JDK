@@ -506,7 +506,7 @@ public class InstallApp8 extends UnitFragment
 				if((currentName1 = apkReceiver.getPackName(APK_INSTALL)).equals(expPackName))
 					break;
 			}
-				if ((currentName1 = apkReceiver.getPackName(APK_INSTALL)).equals(expPackName)==false||(respCode=apkReceiver.getResp(APK_INSTALL))!= ERROR_PACKAGE_INSTALL_FAILED_SIGNATURE_FAILED) 
+				if ((currentName1 = apkReceiver.getPackName(APK_INSTALL)).equals(expPackName)==false||(respCode=apkReceiver.getResp(APK_INSTALL))== PACKAGE_INSTALL_SUCCESS) 
 				{
 					gui.cls_show_msg1_record(TAG, "installapp8", gKeepTimeErr,"line %d:%s空间不足时，安装UC浏览器测试失败（apk=%s,%s，%d）",Tools.getLineInfo(), TESTITEM, expPackName,currentName1,respCode);
 					if (!GlobalVariable.isContinue) 
