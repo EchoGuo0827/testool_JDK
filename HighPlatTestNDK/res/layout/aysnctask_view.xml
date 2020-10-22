@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/keyback" >
+    
+    <FrameLayout
+        android:id="@+id/frame_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <ImageView
+                android:id="@+id/image_back"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+        </RelativeLayout>
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dp20" />
+
+            <TextView
+                android:id="@+id/tv_getpin_input"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dp20"
+                android:background="@drawable/aysnctask_view_bg"
+                android:visibility="gone" />
+            
+            <TextView
+                android:id="@+id/tv_getpin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/dp20"
+                android:background="@drawable/aysnctask_view_bg"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView_mag"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView_rfid"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView_icc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView_prn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView_sec"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView_wlm_wlan"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView_bt"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView_fs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView_sdfs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/textView_sysconfig"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+            
+            <!-- k21深并发 -->
+            <TextView
+                android:id="@+id/tv2_reg_mag"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+            
+            <TextView 
+                android:id="@+id/tv2_mag"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv2_reg_rf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+            
+            <TextView 
+                android:id="@+id/tv2_rf"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone"
+                />
+
+            <TextView
+                android:id="@+id/tv2_reg_icc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+            
+            <TextView 
+                android:id="@+id/tv2_icc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone"/>
+            
+            <TextView 
+                android:id="@+id/tv2_sam"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone"/>
+
+
+            <TextView
+                android:id="@+id/tv2_reg_pin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+            
+            <TextView 
+                android:id="@+id/tv2_pin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv2_reg_prn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+            
+            <TextView 
+                android:id="@+id/tv2_prn"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv2_keyboard"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv2_sec"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv2_alg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv2_fs"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv2_led"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv2_sys_delay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv2_sys_msdelay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv2_sys_postime"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv2_sys_posinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv2_sys_configinfo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv2_sys_time"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+            
+            <TextView 
+                android:id="@+id/tv2_sys_version"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone"/>
+            <TextView
+                android:id="@+id/tv2_beep"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+            <TextView
+                android:id="@+id/tv2_secsm4"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/aysnctask_view_bg"
+                android:textSize="@dimen/dp20"
+                android:visibility="gone" />
+
+            <!-- <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_aysnctask_confirm"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="确认"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/btn_aysnctask_cancel"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="取消"
+                    android:visibility="visible" />
+            </LinearLayout> -->
+        </LinearLayout>
+    </FrameLayout>
+    
+	<LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_key_1"
+                    style="@style/btn_style" />
+
+                <Button
+                    android:id="@+id/btn_key_2"
+                    style="@style/btn_style" />
+
+                <Button
+                    android:id="@+id/btn_key_3"
+                    style="@style/btn_style" />
+
+                <Button
+                    android:id="@+id/btn_key_esc"
+                    style="@style/btn_style" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_key_4"
+                    style="@style/btn_style" />
+
+                <Button
+                    android:id="@+id/btn_key_5"
+                    style="@style/btn_style" />
+
+                <Button
+                    android:id="@+id/btn_key_6"
+                    style="@style/btn_style" />
+
+                <Button
+                    android:id="@+id/btn_key_back"
+                    style="@style/btn_style" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/btn_style"
+                android:layout_width="fill_parent" >
+
+                <Button
+                    android:id="@+id/btn_key_7"
+                    style="@style/btn_style" />
+
+                <Button
+                    android:id="@+id/btn_key_8"
+                    style="@style/btn_style" />
+
+                <Button
+                    android:id="@+id/btn_key_9"
+                    style="@style/btn_style" />
+
+                <Button
+                    android:id="@+id/btn_key_point"
+                    style="@style/btn_style" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_key_on"
+                    style="@style/btn_style" />
+
+                <Button
+                    android:id="@+id/btn_key_0"
+                    style="@style/btn_style" />
+
+                <Button
+                    android:id="@+id/btn_key_under"
+                    style="@style/btn_style" />
+
+                <Button
+                    android:id="@+id/btn_key_enter2"
+                    style="@style/btn_style" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

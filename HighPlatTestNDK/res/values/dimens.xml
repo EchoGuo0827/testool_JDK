@@ -1,0 +1,37 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="margin_top">20dp</dimen>
+    <dimen name="text_size_30dp">30dp</dimen>
+    <dimen name="text_size_20dp">20dp</dimen>
+    
+    <dimen name="width_81">1280dp</dimen>
+    <dimen name="width_91">360dp</dimen>
+ 
+	
+    <!-- 侧边栏偏移量 -->
+    <dimen name="acquirer_menu_offset_91">170dp</dimen>
+    <dimen name="acquirer_menu_offset_81">1000dp</dimen>
+    
+    <dimen name="setting_label_width_91">130dp</dimen>
+    <dimen name="setting_label_width_81">260dp</dimen>
+    <dimen name="setting_item_height_81">60dp</dimen>
+    <dimen name="setting_item_height_91">43dp</dimen>
+    <dimen name="setting_item_two_height_91">86dp</dimen>
+    <dimen name="keyboard_number_height_81">372dp</dimen>
+    <dimen name="keyboard_number_height_91">264dp</dimen>
+    <dimen name="setting_margin_top">20dp</dimen>
+    
+    
+    <!-- 登陆 -->
+    <dimen name="login_frame_RL_marging">23dp</dimen>
+    
+    <!-- XScrollView -->
+    <dimen name="header_height">@dimen/dp70</dimen>
+    <dimen name="footer_height">@dimen/dp50</dimen>
+    <dimen name="footer_padding">@dimen/dp9</dimen>
+    <dimen name="footer_txt_img_space">@dimen/dp9</dimen>
+
+</resources>

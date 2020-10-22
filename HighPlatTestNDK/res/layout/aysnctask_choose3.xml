@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+     >
+     <ListView
+        android:id="@+id/aysnc_task_lv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll"
+        android:layout_alignParentTop="true" >
+    </ListView>
+
+    <LinearLayout 
+        android:id="@+id/ll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        >
+        <RadioGroup
+	        android:id="@+id/rg2_sleep_control"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal" >
+	
+	        <RadioButton
+	            android:id="@+id/rb2_normaltest"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:checked="true"
+	            android:text="不加入休眠" />
+	
+	        <RadioButton
+	            android:id="@+id/rb2_sleeptest"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="加入休眠" />
+	    </RadioGroup>
+        <TextView 
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="并发任务循环次数(0为默认配置)："
+            android:textSize="@dimen/text_size_20dp"
+            />
+        
+        <EditText 
+            android:id="@+id/et2_aysnc_cycletimes"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:text="0"
+            />
+    </LinearLayout>
+   
+</RelativeLayout>

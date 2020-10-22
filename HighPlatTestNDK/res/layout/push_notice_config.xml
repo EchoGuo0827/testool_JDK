@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_green"
+    android:orientation="vertical" >
+    <ScrollView
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+	    <TextView
+	        android:id="@+id/et_content_show"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:text="推送消息内容"
+	        android:textSize="20dp" />
+	
+	    <EditText
+	        android:id="@+id/et_content"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:background="@android:drawable/edit_text"
+	        android:enabled="true"
+	        android:gravity="top"
+	        android:inputType="textMultiLine"
+	        android:maxLines="10"
+	        android:minLines="8"
+	        android:scrollbars="vertical" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <TextView
+            style="@style/TextViewTheme"
+            android:text="推送总次数" 
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/et_totalNumber"
+            style="@style/ConfigEditTextTheme" />
+    </LinearLayout>
+  <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <RadioGroup
+            android:id="@+id/random_regular_choose"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton 
+                android:id="@+id/random_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="随机间隔"
+                android:checked="true"
+                />
+            <RadioButton 
+                android:id="@+id/regular_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="固定间隔"
+                />
+        </RadioGroup>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/et_interval_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="输入每小时推送次数（推送间隔为随机）"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/et_interval"
+        style="@style/ConfigEditTextTheme"
+        android:inputType="number" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioGroup
+            android:id="@+id/group_sleep"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb_sleep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="休眠" />
+
+            <RadioButton
+                android:id="@+id/rb_wake"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="不休眠" />
+        </RadioGroup>
+    </LinearLayout>
+      	</LinearLayout>
+      </ScrollView>
+</LinearLayout>

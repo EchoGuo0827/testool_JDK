@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <files-path path="apk/" name="apk_path"/>
+    
+    <external-path path="/Android/data/com.example.highplattest/" name="files_root"/>
+    
+    <!-- 后面的name只是一个tag -->
+    <external-path path="apk" name="test_apk"/>
+    
+    <root-path name="test_apk1" path="." />
+    <cache-path name="test_apk2" path="apk" />
+    <external-files-path name="test_apk3" path="apk" />
+    <external-cache-path name="test_apk4" path="apk" />
+    
+</paths>

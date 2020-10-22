@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_green"
+    android:orientation="vertical" >
+
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <CheckBox
+                android:id="@+id/newland"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/newland"/>
+
+            <CheckBox
+                android:id="@+id/allinpay"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/allinpay" />
+
+            <CheckBox
+                android:id="@+id/meituan"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/meituan" />
+            <CheckBox
+                android:id="@+id/liandong"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/liandong" />
+            <CheckBox
+                android:id="@+id/yinsheng"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/yinsheng" />
+             <CheckBox
+                android:id="@+id/landi_joint"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/landi_joint" />
+              <CheckBox
+                android:id="@+id/landi_infix"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/landi_infix" />
+		</LinearLayout>
+
+</LinearLayout>

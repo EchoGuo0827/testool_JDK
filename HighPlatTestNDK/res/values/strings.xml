@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HighPlatTest</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="tv_quick_choose">进行子用例的快速选择</string>
+	<string name="btn_interrupt">中断</string>
+	<string name="tv_test_result">测试结果显示</string>
+	<string name="mdm_patch_type">当前补丁号(1_5)"</string>
+    <string name="dial_num">当前拨号串:</string>
+    <string name="btn_ok">是</string>
+    <string name="btn_cancel">否</string>
+    <string name="config_link">重新配置链路参数：</string>
+    <string name="usb_switch_message">usb口是否能够连接上电脑</string>
+    <string name="usb_open">打开</string>
+    <string name="usb_close">关闭</string>
+    <string name="usb_open_yes">是</string>
+    <string name="usb_open_no">否</string>
+    <string name="page_last">上一页</string>
+    <string name="page_next">下一页</string>
+    <string name="tv_snd_times">设置包的发送次数：</string>
+    <string name="tv_test_times">设置每张卡测试次数：</string>
+    <string name="tv_local_ip">当前本地IP</string>
+    <string name="tv_local_mask">当前本地掩码</string>
+    <string name="tv_local_gata">当前本地网关：</string>
+    <string name="tv_server_ip">当前服务器IP</string>
+    <string name="tv_server_port">当前服务器端口</string>
+    <string name="tv_local_para">本地网络参数配置</string>
+    <string name="tv_server_para">服务器参数配置</string>
+    <string name="tv_trans_para">传输层参数配置</string>
+    <string name="tv_cross_times">设置压力次数:</string>
+    <string name="tv_print_density">设置打印灰度:(0-15)</string>
+    <string name="tv_snd_packet_len">设置初始包长：</string>
+    <string name="tv_packet_add">包长是否递增：</string>
+    <string name="tv_snd_data">设置发送数据</string>
+    <string name="tv_sel_track">选择要读磁道：</string>
+    <string name="tv_sel_display">选择显示模式：</string>
+    <string name="fix_data">固定数据</string>
+    <string name="random_data">随机数据</string>
+    <string name="fix_TK23">23道</string>
+    <string name="fix_TK123">123道</string>
+    <string name="fix_trend">动态</string>
+    <string name="fix_tcp">TCP</string>
+    <string name="fix_udp">UDP</string>
+    <string name="fix_ssl">SSL</string>
+    <string name="fix_static">静态</string>
+    <string name="fix_yes">显示</string>
+    <string name="fix_no">不显示</string>
+    <string name="btn_sure">确定</string>
+    <string name="btn_return">返回</string>
+    <string name="btn_complete">完成</string>
+    <string name="btn_exit">退出</string>
+    <string name="img_show_time">图片显示时间:</string>
+    
+    <!--wire的配置  -->
+    <string name="tv_wire_link_config">重新配置链路参数</string>
+    <string name="tv_wire_local_APN">当前APN</string>
+    <string name="tv_wire_ppp_name">当前PPP用户名</string>
+    <string name="tv_wire_ppp_pwd">当前PPP密码</string>
+    
+    <!--串口配置  -->
+    <string name="com_bps_choose">波特率的选择</string>
+    
+    <!--密码键盘  -->
+	<string name="inputPassWord">请持卡人输入密码</string>
+	<string name="passWord_express">密码明文</string>
+	<string name="param_tag">Tag:</string> 
+  	<string name="param_value">Value:</string>
+  	
+  	<!--系统设置  -->
+  	<string name="set_mac_addr">mac地址</string>
+  	<string name="set_imei_num">imei号</string>
+  	<string name="tv_card_number">设置磁卡测试张数：</string>
+  	
+  	<!--验签设置 -->
+  	<string name="newland">新大陆默认验签体系</string>
+  	<string name="allinpay">通联验签体系</string>
+  	<string name="meituan">美团验签体系</string>
+  	<string name="liandong">联动验签体系</string>
+  	<string name="yinsheng">银盛验签体系</string>
+  	<string name="landi_joint">江苏联社验签体系</string>
+  	<string name="landi_infix">汇宜验签体系</string>
+  	<!--蓝牙底座合法性认证  -->
+  	<string name="auth_open">开启合法性认证</string>
+  	<string name="auth_close">关闭合法性认证</string>
+  	
+  	<!-- UUID提示语 -->
+  	<string name="uuid_service">Service UUID:</string>
+  	<string name="read_uuid">Read Characteristic UUID:</string>
+  	<string name="write_uuid">Write Characteristic UUID:</string>
+  	<string name="unknown_device">Unknown Device</string>
+  	<string name="unknown_service">Unknown Service</string>
+  	<string name="unknown_characteristic">Unknown Characteristic</string>
+  	
+  	
+  	<!-- 界面中英文 SysTest模块 -->
+     <string name="systest_tip">不支持自动测试,请手动验证</string>
+     <string name="systest_mag_cancel">用户取消刷卡</string>
+     <string name="systest_mag_swipe">请刷卡</string>
+     <string name="systest_mag_failed">刷卡失败</string>
+     <string name="systest_mag_timeout">刷卡超时</string>
+     <string name="systest_mag_no_data">道无数据!</string>
+     <string name="systest_mag_data">道数据</string>
+     <string name="systest_rf_init_fail">初始化失败！请检查配置是否正确</string>
+     <string name="systest_rf_detect_fail">寻卡失败</string>
+     <string name="systest_rf_active_fail">激活失败</string>
+     <string name="systest_rf_code_err">返回码错误或数据校验失败</string>
+     <string name="systest_rf_random_err">取随机数或读块数据失败</string>
+     <string name="systest_rf_close_fail">关闭场失败</string>
+     <string name="systest_rf_time_succ">累计成功读写时间不足10s</string>
+</resources>

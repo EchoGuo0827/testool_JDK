@@ -1,0 +1,204 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/keyback"
+    tools:context=".MainActivity" >
+
+    <FrameLayout
+        android:id="@+id/frame_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <RelativeLayout
+            android:id="@+id/lay_scan_view"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:visibility="gone" >
+
+            <SurfaceView
+                android:id="@+id/surface_main"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+
+            <!--
+                 <com.example.highplattest.main.DefineSurface
+                android:id="@+id/mydefine_view"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+            -->
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <ImageView
+                android:id="@+id/image_back"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:textSize="@dimen/dp20" />
+
+            <TextView
+                android:id="@+id/data_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:textSize="@dimen/dp20" />
+
+            <TextView
+                android:id="@+id/cmd_textview"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:textSize="@dimen/dp20" />
+<!-- 
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_scan_light"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="开/关闪光灯"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/btn_inter"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="退出测试"
+                    android:visibility="visible" />
+            </LinearLayout> -->
+        </LinearLayout>
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_key_1"
+                    style="@style/btn_style" />
+
+                <Button
+                    android:id="@+id/btn_key_2"
+                    style="@style/btn_style" />
+
+                <Button
+                    android:id="@+id/btn_key_3"
+                    style="@style/btn_style" />
+
+                <Button
+                    android:id="@+id/btn_key_esc"
+                    style="@style/btn_style" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_key_4"
+                    style="@style/btn_style" />
+
+                <Button
+                    android:id="@+id/btn_key_5"
+                    style="@style/btn_style" />
+
+                <Button
+                    android:id="@+id/btn_key_6"
+                    style="@style/btn_style" />
+
+                <Button
+                    android:id="@+id/btn_key_back"
+                    style="@style/btn_style" />
+            </LinearLayout>
+
+            <LinearLayout
+                style="@style/btn_style"
+                android:layout_width="fill_parent" >
+
+                <Button
+                    android:id="@+id/btn_key_7"
+                    style="@style/btn_style" />
+
+                <Button
+                    android:id="@+id/btn_key_8"
+                    style="@style/btn_style" />
+
+                <Button
+                    android:id="@+id/btn_key_9"
+                    style="@style/btn_style" />
+
+                <Button
+                    android:id="@+id/btn_key_point"
+                    style="@style/btn_style" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/btn_key_on"
+                    style="@style/btn_style" />
+
+                <Button
+                    android:id="@+id/btn_key_0"
+                    style="@style/btn_style" />
+
+                <Button
+                    android:id="@+id/btn_key_under"
+                    style="@style/btn_style" />
+
+                <Button
+                    android:id="@+id/btn_key_enter2"
+                    style="@style/btn_style" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

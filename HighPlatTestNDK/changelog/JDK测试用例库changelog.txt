@@ -1,0 +1,988 @@
+------------------------------------------------2020年10月主要变更记录-------------------------------------------------
+1、Other模块
+	新增指纹识别测试工具 (涉及Other28 陈丁提交)
+2、Scan模块
+	Scan6：摄像头参数错误,F7和F10不支持该异常测试点, BUG2020093003643修复(郑佳雯)
+	
+3、Systest模块
+	EMV案例去除MAC_SM4_UNIONPAY运算，不再区分国内和海外版本。(涉及Systest97 Systest109 陈丁提交)
+	SysTest87:休眠唤醒后未初始化摄像头,BUG2020100903653修复(郑佳雯)
+------------------------------------------------2020年9月主要变更记录-------------------------------------------------
+1.Net模块
+	新增读取双卡IMEI号(Net12-郑薛晴)
+	新增getEthernetStatus接口的案例N550(Net13-郑薛晴)
+2、Apn模块
+	新增A5预制APN的变更点(Apn7)
+3、Scan模块
+	ScanSet增加对MICRO QR码的支持(Scan40 Scan41-郑佳雯)
+	ScanSet增加对Code128的ABCD TXNY的支持(Scan38 Scan39-郑佳雯)
+4、Other模块
+	修复other24案例本机无法连接51222端口问题(涉及Other24 陈丁提交)_BUG2020091803410
+	修复other11抛出异常问题(涉及Other11 陈丁提交)_BUG2020070303835
+5、SysTest模块
+	新增小屏SP100分支，修改pinpad通讯实现(涉及Systest106 Systest107 陈丁提交)
+6、Kaoji模块
+	新增烤机模块(涉及kaoji模块，邱昭协)
+7、Installapp模块
+	BUG2020092403521解决:解决银商版本发送广播异常问题。和开发沟通过。由案例进行修改。修改广播接收器接收安装返回码的逻辑(涉及Installapp1 Installapp2  ReceiverTracker 陈丁提交)
+8、SystemConfig模块
+	BUG2020092303492修复，参数传递错误-(涉及SystemConfig65,郑佳雯提交)
+
+------------------------------------------------2020年8月主要变更记录-------------------------------------------------
+1.SystemNode模块
+	新增N910欧洲版读取RSA密钥信息案例(涉及SystemNode14- 陈丁提交)
+1。Printer模块
+	新增GetStrPrnSize接口的测试案例(Printer10-谢志兴)
+	
+2.Ums模块
+	ums模块提交(ums1-ums15-王凯，郑佳雯、郑薛晴)
+1.SysTest模块
+	增加重启_安装密钥的压力测试（SysTest96-zhengxq）
+	新增EMV多模块并发测试(涉及Systest109 陈丁提交)
+	N910海外欧洲版,wifi安全模式只支持WPA2。案例手动输入和自动扫描两种方式新增分支判断。(涉及Config showDialog 陈丁提交)
+	修改BLE蓝牙为高速传输(涉及Systest300 陈丁提交)
+	新增欧洲版N910关闭BLE蓝牙扫描验证(涉及Systest80 陈丁提交)
+	根据开发建议增加海外加解密算法为DES。使用CalcDes接口(涉及Systest109 Systest97 陈丁提交)_BUG2020081802872_BUG2020081802869
+	修复Gui界面显示异常问题(涉及Systest109 陈丁提交)_BUG2020072902661
+	修复多模块并发M0带C卡未寻卡问题(涉及Systest100 Systest101 Systest102 Systest109 陈丁提交)_BUG2020082202922
+
+------------------------------------------------2020年7月主要变更记录-------------------------------------------------
+1.SystemConfig
+	状态栏菜单提示语去除A7不支持项(涉及SystemConfig24 陈丁提交)
+	根据开发回复，A7传入空数组应无变化而不是默认显示，修改提示语(涉及Systemconfig24 陈丁提交)
+	增加日志系统相关测试案例（涉及SystemConfig68,SystemConfig69,SystemConfig71,郑薛晴）
+2.Event
+	修复event4案例的异常抛出问题(郑薛晴)
+3.Scan
+	屏蔽Zxing扫码相关案例（涉及Scan模块，郑薛晴）
+	增加QR Code最多可以多码情况下扫出两个码值的测试案例(涉及Scan36、Scan37,郑薛晴)
+4.Net模块
+	F7以太网状态返回值修改(涉及Net6 Systest33 Systest45 Systest6  陈丁提交)
+5、Other模块
+	修改提示语(涉及Other7 陈丁提交)
+6.Payment模块
+	2、Payment模块
+	A7A9除X5外其他机型ota升级优化，延时升级校验签名(即内容错误情况),若校验失败直接发送广播，结束升级流程。(涉及Payment3 陈丁提交)
+8.SystemNode模块
+	新增emv优化蜂鸣器响的测试案例(涉及Systemnode13 陈丁提交)
+	
+9.SysTest
+	根据测试人员需求。将wifi兼容测试写入的sheet改为动态获取(涉及Systest4 陈丁提交)
+	根据开发建议，将wifiutil操作全部放到layer中，确保都是同一个wifiutil对象(涉及Systest4 陈丁提交)
+	修复wifi兼容测试获取到的部分路由连接时间为负数(涉及Systest4 陈丁提交)BUG2020040902493
+	写满设备改为动态写入多个文件写满。每次写入20M (涉及Systest12 陈丁提交) BUG2020031802003
+	修复第一次开机搜索不到蓝牙问题(涉及Config 陈丁提交) BUG2020042002709
+	去除A9平台判断(涉及Systest75 陈丁提交)
+	修改高端通讯案例，修改BLE蓝牙性能数据为1M,GUI使用printf，海外和巴西版本不测BLE性能 (涉及Systest300 陈丁提交)
+	解决X5以太网和打印压测软复位现象。(涉及Systest40 陈丁提交)_BUG2020062903780
+	解决多模块浅并发,wifinetup失败问题(涉及layer 陈丁提交)
+	以太网 wlm wlan都加了网络连接的判断和Pin网络判断。 连接挂断次数修改为20。wlm增加了获取运营商和网络类型(she)
+	脱机Pin案例新增USB通讯方式。海外版SP100案例去除明文安装SP100TMK密钥。改为测试人员自行安装NLP文件(涉及Systest106,Systest107 陈丁提交)
+	
+6、其他
+	适配8541E的N920产品,A9平台(郑薛晴)
+
+------------------------------------------------2020年6月主要变更记录-------------------------------------------------
+1、SystemNode模块
+	将获取fuse标识的测试方法由Scan24搬移至SystemNode1（涉及SystemNode1 陈丁提交）
+2、Net模块
+	增加判断机型逻辑。修改以太网打开关闭状态返回值。(涉及Net6 Systest6 Systest33 Systest45陈丁提交)
+3、Printer
+	修复二维码打印部分西班牙语打印不出问题,使用宋体的ttf字库,修改部分提示语(涉及Printer2 陈丁提交)
+	打印过程中切刀case，在切刀前添加走纸（涉及Printer8 陈丁提交）
+4、Payment
+	X5的ota存放目录修改为"/mnt/sdcard/fota_update"(涉及Paymen3,Payment5-郑薛晴)
+5、SystemConfig模块
+	setAirplaneModeEnabled飞行模式开关接口新增案例（涉及SystemConfig64-郑薛晴）
+6、SystemNode
+	新增PCI需求23小时50分重启，新增sys.self_reboot属性(涉及SystemNode8 ParaEnum 陈丁提交)
+7、Android
+	修复设置时间和时区案例抛出异常问题(涉及AndroidManifest.xml 陈丁提交)BUG2020070203810
+	修复download无法下载apk问题(涉及Android32 陈丁提交)BUG2020070203811
+
+8、SysTest模块
+	打印交叉添加ttf打印方式（涉及打印交叉案例-陈丁）
+	数据连续打印添加设置字体行间距浓度,修改宋体字库放置位置，修改部分提示语,修复异常测试切纸参数异常问题(涉及Systest9 陈丁提交)
+	修复以太网空指针异常问题   (涉及Systest40 陈丁提交)
+	wifi兼容测试新增将测试结果写入excel文件中(涉及Systest4 BaseFragment 陈丁提交)
+	根据/system/SecureModule/sec.conf的key_misuse值判断返回值，key_misuse=0，返回值为0；key_misuse=1，返回值为-1703（涉及systest75-王凯）
+	复7.1机器无法获取到ssid和密码的问题(涉及Systest52 DefaultFragment-陈丁)
+	解决X1 wifi断开返回-1问题(涉及Systest4-陈丁)
+	新增N850串口权限变更案例(涉及Systest89-陈丁0716)
+	
+------------------------------------------------2020年5月主要变更记录-------------------------------------------------
+1、SystmConfig模块
+	系统设置-辅助功能/网络界面按箭头应返回上一个界面，而不是设置界面(涉及SystemConfig76,陈丁)
+	新增验证第三方应用是否有权限访问特定的串口文件(Systemconfig77- 陈丁)
+	
+1、Systemversion模块
+	新增X1获取主副屏、触摸屏信息测试案例(涉及Systemversion15 陈丁提交)
+	
+2、Printer模块
+	蓝牙打印新增对比内置打印机地址(涉及Printer1 -陈丁)
+	X5新增*cut命令切纸的用例(Printer8-郑薛晴)
+	增加阿拉伯语的打印测试(Printer3-郑薛晴)
+	修改X5蓝牙打印,打印宽度域指令。区分大纸和小纸。修复部分条形码无法打印问题(涉及Printer1 陈丁提交)
+
+3、Systest模块
+	修改蓝牙流程压力测试，增加1s休眠。兼容不同平台的文件写入速度。防止蓝牙连接失败(涉及Systest5 陈丁提交)
+	新增触屏压力测试（Systest108-陈丁）
+	新增获取扫描到的路由器mac地址(Systest4-陈丁)
+	修改扫码压力测试案例(SysTest104-郑薛晴)
+	修改射频卡综合场景压力测试。增加失败标志位，在案例失败解绑事件机制后，重新注册事件机制，确保案例继续执行 (Systest2-陈丁)
+	新增sp100国内版脱机pin案例(Systest107,NDK.java,libTLK.so-陈丁)
+	新增触屏边缘测试(涉及Systest108,Touch2Acvitity,Touch2View,Androidmainfest.xml-陈丁)
+	
+4、Android模块
+	SYSTEM_ALERT_WINDOW权限调整为normal，第三方应用可获取(Android36-王凯)
+	
+5.WebView模块
+	新增验证拼音输入法键盘弹出键盘问题 (涉及 WebView4,WebViewActivity3,webview3.xml,AndroidManifest.xml-陈丁)
+	
+6、Payment模块
+	修改提示语，避免测试人员将正常现象提交RDM(Payment3 -陈丁)
+7、InstallApp模块
+	优化静默安装显性安装案例(涉及Installapp1 Installapp2 Tools.java 陈丁提交)
+8、Net模块
+	新增前置判断，如果测试前移动网络打开，则测试后置也恢复打开状态(涉及Net9 陈丁提交)
+9、Usbcomm模块
+	修改获取的OTG节点名称为ttyGS0 (涉及Usbcomm9 陈丁提交)
+10、Payment模块
+	修改延时升级版本命名错误只会返回state=0，其他不返回的判断。(涉及Payment3 陈丁提交)
+	广播比acvitity先启动，导致在接收广播中获取全局变量失败崩溃。修改为从数据库中获取。(涉及Payment3 OtaUpdateBroadcastReceiver 陈丁提交)
+11、其他模块
+	新增验证第三方应用可以启动后台服务(涉及F7Servicetest.apk 陈丁提交)
+	移动模块案例增加测试前判断移动网络状态。测试后恢复初始状态(涉及所有移动模块案例 陈丁提交)
+------------------------------------------------2020年4月主要变更记录-------------------------------------------------
+1、Android模块
+	X5双屏异显增加休眠之后双屏异显正常（涉及Android29,陈丁提交）
+2、AndroidPort模块
+	根据黑盒测试人员建议执行完串口案例失败的情况下。不退出案例，继续执行。修复返回值异常问题(涉及UsbComm6 陈丁提交)
+3、Scan模块
+	扫码模块优化，全部修改为硬件配置码方式动态适配（涉及scan模块，郑薛晴提交）
+4、SystemConfig模块
+	新增X1第三方应用使用关机权限以及系统接收MTMS应用的恢复出厂设置广播测试案例(涉及SystemConfig71,陈丁提交)
+	新增F7验证系统时间更新不影响K21时间验证(涉及Systemconfig74)
+	新增验证语言和时区未设置成功，且恢复出厂后配置的属性均未生效的问题(涉及Systemconfig75 陈丁提交)
+5、HID
+	增加F7/F10设备通过HID接口向上位机传输数据的测试案例，测试上位机使用HIDTest.exe(涉及Hid1,魏美杰提交)
+6、SysTest模块
+	根据黑盒测试人员建议修改以太网案例显示时间(涉及systest6 陈丁提交)
+	修改RS232串口波特率轮询操作，新增串口关闭。防止打开次数过多导致崩溃黑屏。(涉及Systest10 陈丁提交)
+	根据测试人员建议修改增加文字区别带C不带C，普通Felica和八达通。A7平台不支持组合寻卡测试项(涉及SysTest2，陈丁提交)
+	修改wifi重启通讯压力，增加wifi打开和连接时间，去除ip和wifiID的对比。验证F7开机连接wifi问题(涉及Systest4 Wlanreboot2Activity)
+
+------------------------------------------------2020年01月主要变更记录-------------------------------------------------
+1、Android模块
+	获取X5屏幕密度比 和像素密度(涉及Android35，陈丁提交)
+	修改android16为Dateformat类时间日期获取。(涉及Android16，陈丁提交)
+2、AndroidPort模块
+	新增多串口异常测试updata接口(涉及AndroidPort8，胡慧婕提交)
+3、Net模块
+	修改NET5网络类型判断逻辑(涉及Net5，陈丁提交)
+	新增无卡情况下获取默认网络类型(涉及Net7，胡慧婕提交)
+4、SystemConfig模块
+	新增设置F7导航栏的开启与关闭以及自动隐藏和不自动隐藏(涉及SystemConfig68,魏美杰提交)
+	新增getSystemSetting获取数据库属性(涉及SystemConfig69,魏美杰提交)
+5、Nfc模块
+	新增验证NCF回调函数异常(F7)(涉及Nfc6，陈丁提交)
+6、SysTest模块
+	修改机械臂扫码压力案例，增补机械臂扫码性能案例(涉及SysTest56,魏美杰提交)
+	新增sp100脱机pin指令和NDK接口SecVerifyPIN验证的案例(涉及SysTest106，陈丁提交)
+------------------------------------------------2019年12月主要变更记录-------------------------------------------------
+1、Systest模块
+	修复Android9.0U盘路径获取错误问题(涉及SysTest30、12，陈丁提交)
+	修复F7  wifi兼容测试卡住问题(涉及SysTest4，陈丁提交)
+	新增wifi连接后重启判断wifi状态的压力测试(涉及SysTest104，陈丁提交)
+	新增Wifi重启判断连接通讯压力案例(涉及SysTest4，陈丁提交)
+	新增获取以太网状态方法。兼容A9和A5(涉及SysTest33、6，陈丁提交)
+	扫码综合新增F7读取配置码来动态配置摄像头(涉及SysTest56，陈丁提交)
+	新增M1卡寻卡压力重启测试(涉及SysTest2，陈丁提交)
+	新增复现SP610客诉，打印和文件系统交叉问题案例(涉及SysTest105，陈丁提交)
+	修改wifi兼容测试逻辑。建链和连接数传测试项超过20次失败就跳过该测试(涉及SysTest4，陈丁提交)
+	修改案例可以选择M0带C卡(涉及SysTest28，陈丁提交)
+2、SystemVersion模块
+	新增F7人脸识别信息获取案例(涉及SystemVersion13，陈丁提交)
+	修改反射调用获取硬件加速的方法。解决抛出异常问题(涉及SystemVersion9，陈丁提交)
+3、SystemConfig模块
+	新增X1  pn sn csn 机器号的设置和获取案例(涉及SystemConfig66,胡慧婕提交)
+	新增setSystemSetting和getSystemSetting设置系统选项的显示和隐藏等功能改用这种统一用字段属性来更改(涉及SystemConfig65,魏美杰提交)
+	设置home键测试案例(海外版)案例增补提交(涉及SystemConfig67，陈丁提交)
+4、SystemConfig模块
+	新增关键字setting_disable_wifi控制是否使用wifi功能(涉及SystemConfig64，陈丁提交)
+5、AndroidPort模块
+	AndroidPort案例兼容X3(涉及AndroidPort5、3、200、2、1，陈丁提交)
+6、Other模块
+	新增other7 ip增加100001条信息测试 已经reset删除测试(涉及Other7，陈丁提交)
+	新增统计服务ipReset接口测试(涉及Other21，陈丁提交)
+	新增IP地址形式以Socket访问网址(涉及Other7，胡慧婕提交)
+7、Scan模块
+	修改获取F7人脸识别模组摄像头为根据读取硬件配置码再进行判断具体打开哪个摄像头(涉及Scan10，陈丁提交)
+8、Android模块
+	新增Android9.0获取整个SD内存方法，包括系统占用等(涉及Android8，陈丁提交)
+9、Payment模块
+	更新F7 ota升级广播发送(涉及Payment3，陈丁提交)
+10、InstallApp模块
+	验证N700验签库案例使用安卓原生安装(涉及InstallApp16，陈丁提交)
+11、其他
+	解决扫码枪扫出码值多出FFS或者S问题。过滤扫码枪返回的扫码标志位(涉及DefaultFragment，陈丁提交)
+	案例兼容X3新增支持安全模块机型(涉及PatternActivity、MainActivity、IntentActivity，陈丁提交)
+------------------------------------------------2019年11月主要变更记录-------------------------------------------------
+1、Printer模块
+	新增验证X5打印机切纸异常(涉及Printer17，陈丁提交)
+2、SysTest模块
+	新增X5_poynt新扫码压力(涉及SysTest104，陈丁提交)
+	扫码性能新增前置切换后置的扫码性能(涉及SysTest56，陈丁提交)
+	修改wifi开关状态获取的判断，改为循环判断(涉及SysTest4，陈丁提交)
+	新增Android9.0 wifi扫描逻辑。兼容9.0wifi特性(涉及SysTest4，陈丁提交)
+	修复M1 M0卡性能报错问题。对两种卡在寻卡前先进行上电防冲突(涉及SysTest2，陈丁提交)
+	增加M1卡跨扇区事件注册，解决寻卡寻不到问题(涉及SysTest2，陈丁提交)
+	修改扫码枪案例退出逻辑，解决配置完无法退出问题。(涉及SysTest79，陈丁提交)
+	新增F7扫码兼容(涉及SysTest56，陈丁提交)
+	新增X5新扫码增加对焦功能(涉及SysTest104，陈丁提交)
+	解决F7外置TF卡和U盘读写异常问题(涉及SysTest12，陈丁提交)
+	新增休眠扫码压力测试 和异常测试(涉及SysTest104，陈丁提交)
+	修复以太网交叉异常问题(涉及SysTest40、38、26、18，陈丁提交)
+	修改案例，改为自动打开关闭以太网开关(涉及SysTest33，陈丁提交)
+3、Android模块
+	增加验证双屏异显广播注册失败问题(涉及Android29，陈丁提交)
+	新增视频播放测试案例(涉及Android34，陈丁提交)
+4、SystemVersion模块
+	修改系统属性获取方式(涉及SystemVersion10，陈丁提交)
+5、Payment模块
+	新增升级ota过程中断电或者重启。重新进行ota升级应正常的测试(涉及Payment3，陈丁提交)
+6、Scan模块
+	新增软解码NLS字符串的判断(涉及Scan20，陈丁提交)
+	修改获取分辨率大小方法，防止数组越界。解决对象为空抛出异常的问题(涉及Scan25，陈丁提交)
+	修复scan25连续扫码抛出异常问题(涉及Scan25，陈丁提交)
+	新增测试X5扫码新接口测试案例(涉及Scan29，陈丁提交)
+7、Other模块
+	修复设置开机动画无反应问题(涉及Other5，陈丁提交)
+	修复无法获取应用时间和应用路径。 以及无法获取访问网址信息的错误(涉及Other7，胡慧婕提交)
+	添加Android9.0的路径分支。解决F7和其他机型路径不一致问题(涉及Other9，陈丁提交)
+	新增HttpURLConnection方式访问网址。解决webview访问网址无访问信息保存到数据库问题。IC卡授权新增pckgname和site字段(涉及Other7，胡慧婕提交)
+8、InstallApp模块
+	新增从外部sd卡安装apk和content Uri路径安装apk的case（InstallApp1，魏美杰提交）
+9、其他
+	GUI界面显示时间缩短(涉及DefaultFragment，陈丁提交)
+	新增A9反射获取方法(涉及BaseFragment，陈丁提交)
+	添加F7的密钥属主端的枚举，解决无法获取密钥属主端抛出异常问题(涉及PatternActivity、MainActivity，陈丁提交)
+------------------------------------------------2019年10月主要变更记录-------------------------------------------------
+1、Printer模块
+	票据打印中新增验证1b 45指令加粗异常的问题(涉及Printer12，陈丁提交)
+	X5打印纸适配修改优化(涉及Printer12，陈丁提交)
+2、SysTest模块
+	新增验证星pos TLK密钥安装异常问题(涉及SysTest55，陈丁提交)
+	新增X5以太网与usbhost异常验证(涉及SysTest6，陈丁提交)
+	新增X5以太网开关压力测试(涉及SysTest6，胡慧婕提交)
+	新增M0卡带C认证操作。解决M0卡成功率低的异常问题(涉及SysTest2，陈丁提交)
+3、Scan模块
+	新增case自动识别软解码方式下，调用setDecodeScreenResolution设置解析框大小应无效(涉及Scan11，陈丁提交)
+	新增传入摄像头ID错误验证初始化无默认Csae(涉及Scan10，陈丁提交)
+	新增N700获取是否支持按键扫码的值(涉及Scan28，陈丁提交)
+4、InstallApp模块
+	新增X5验证卸载mtms权限应用(涉及InstallApp15，陈丁提交)
+5、Android模块
+	修改Android9.0获取APN方式(涉及Android2，陈丁提交)
+	修复Android16异常问题(涉及Android16，陈丁提交)
+	解决Android1崩溃问题(涉及Android1，陈丁提交)
+	X5双屏异显新增强制双屏同显测试和开机默认值测试(涉及Android29，魏美杰提交)
+6、Net模块
+	修改获取以太网状态方式，改成循环获取(涉及Net6，陈丁提交)
+	添加线程网络优先级,WiFi与4G共存重复绑定测试(涉及Net2，魏美杰提交)
+7、系统
+	案例兼容F7、CPOS X1和CPOS_X5_POYNT新机型(涉及BaseFragment、UnitFragment、ParaEnum，陈丁提交)
+8、其他
+	修改F7、CPOS X1和CPOS_X5_POYNT新机型的配置文件(陈丁提交)
+------------------------------------------------2019年9月主要变更记录-------------------------------------------------
+1、SysTest模块
+	新增蓝牙底座USB命令通道速率性能  RS232数据通道性能(涉及SysTest74，陈丁提交)
+	添加M0卡M1卡走A卡事件机制寻卡(涉及SysTest2，陈丁提交)
+	新增蓝牙底座添加双通道并发（收发数据）压力测试性能测试(涉及SysTest74，陈丁提交)
+	新增全功能蓝牙底座性能测试(涉及SysTest103，陈丁提交)
+	扫码压力性能修改默认扫码框大小,已经提供选择验证1280*720的扫码框(涉及SYSTest56，陈丁提交)
+	修改SAM1卡不支持事件机制。修改配置SAM1卡时案例走向(涉及SysTest28，陈丁提交)
+	扫码综合增加机械臂扫码压力测试和机械臂扫码流程测试(涉及SYSTest56，魏美杰提交)
+2、SystestConfig模块
+	新增X5设备关闭副屏测试用例(涉及SystestConfig63，魏美杰提交)
+3、Scan模块
+	新增扫上海地铁码(涉及Scan8，陈丁提交)
+	修改图片解析扫码增加NLS方式(涉及Scan9，魏美杰提交)
+	新增scan26 扫码兼容相机的各种分辨率(涉及Scan26，陈丁提交)
+4.系统
+	修改m0卡读卡事件机制的性能获取。解决无法获取性能问题(涉及DefaultFragment，陈丁提交)
+------------------------------------------------2019年8月主要变更记录-------------------------------------------------
+1、Printer模块
+	新增4个英文字体，分别为PRN_ZM_FONT_8x16SR(8x16常规)、PRN_ZM_FONT_8x16SBL(8x16加粗)、PRN_ZM_FONT_12x24SR(12x24常规)、PRN_ZM_FONT_12x24SBL(12x24加粗)的测试(涉及Printer3,郑薛晴提交)
+2、NDK模块
+	添加了退出NDK用例后直接退出整个APP(涉及NDK1,郑薛晴提交)
+3、Other模块
+	新增X5对SystemAPP标记的应用禁止卸载的测试用例(涉及Other20,魏美杰提交)
+4、SysTest模块
+	新增事件机制支持寻多种卡片组合，包括A卡、B卡、Felica(涉及SysTest2,陈丁提交)
+	射频性能新增寻卡性能(涉及SysTest2,陈丁提交)
+	扫码综合新增无预览画面的扫码压力(涉及Systest56的压力,郑薛晴提交)
+	新增全功能蓝牙底座部分性能测试案例(涉及SysTest74，陈丁提交)
+5、APN模块
+	新增对伊朗APN的测试用例，插入伊朗SIM应显示对应4个APN(涉及APN5，魏美杰提交)
+6、Android模块
+	新增震动器案测试用例(涉及Android33，魏美杰提交)
+7、Battery模块
+	修改控制OTG能否给设备充电节点路径(涉及Battery5，魏美杰提交)
+
+------------------------------------------------2019年7月主要变更记录-------------------------------------------------
+1、Printer模块
+	新增Poynt_X5打印图片的测试用例（涉及Printer15,陈丁提交）
+	新增Poynt_N910打印图片的测试用例（涉及Printer16,陈丁提交）
+2、Android模块
+	新增DownloadManager下载文件的测试案例（涉及Android32，魏美杰提交）
+3、Key模块
+	添加锁屏的测试（涉及Key1，郑薛晴提交）
+4、Sec模块
+	 sec31和sec32根据开发反馈PCI规范海外版本不支持NDK_SecKeyErase后自动装载TLK密钥，修改为海外版本不支持（涉及Sec31和Sec32,郑薛晴提交）
+	 sec5添加mpos工作密钥安装组包的异常测试（涉及Sec5,郑薛晴提交）
+5、Net模块
+	网络共存代码修改，网络并存新增测试（涉及Net2,郑薛晴提交）
+	新增4G上网屏蔽测试（涉及Net4，朱少辉提交）
+	新增移动网络模式切换测试（涉及Net5,朱少辉提交）
+	新增以太网的开关和获取状态的操作（涉及Net6，郑薛晴提交）
+6、SystemConfig模块
+	修改Systemconfig54的根据开发支持的异常案例，增加短按电源键测试案例（涉及Systemconfig54,郑薛晴提交）
+	新增设置和获取客户标记（涉及Systemconfig62,魏美杰提交）
+	根据测试人员要求增加了开启统一验签、关闭统一验签、清空白名单的开关（涉及Systemconfig4,郑薛晴提交）
+	兼容原先Displey相关接口基础上添加Display系列接口(涉及SystemConfig模块,郑薛晴提交)
+7、SysTest模块
+	提交CBC安装TLK密钥问题，修改安装DUKPT密钥方式，修改对海外机型的支持，添加PCI规范测试，添加主密钥客诉点测试，优化自检密钥检测（涉及Systest55,郑薛晴提交）
+------------------------------------------------2019年6月主要变更记录-------------------------------------------------
+1、Sec模块
+	sec5添加mpos工作密钥安装组包的异常测试(涉及Sec5,郑薛晴提交)
+2、Battey模块
+	新增OTG是否对外供电节点的设置(涉及Battery5,郑薛晴提交)
+3、Other模块
+    N550，N920增加开机获取TUSN测试（涉及other19,朱少辉提交）
+4、Auth模块
+	新增指令集方式保存SN到文件（涉及Auth6,朱少辉提交）
+5、Printer模块
+	根据开发添加各种符号如逗号、句号的打印测试（涉及Printer4,郑薛晴提交）
+6、Digled模块
+	增加客诉首位显示小数点死机问题（涉及Digled2,郑薛晴提交）
+	新增扫码LED指示灯节点控制测试（涉及Digled4，朱少辉提交）
+7、SystemConfig模块
+	新增屏蔽长按电源键功能（涉及Systemconfig60，朱少辉提交）
+8、SysTest模块
+	扫码综合测试性能添加从摄像头打开到扫码结束的性能测试，压力测试添加休眠唤醒后摄像头切换测试（涉及Systest56,朱少辉提交）
+	新增双通道蓝牙底座OTA升级测试（涉及Systest83,朱少辉提交）
+------------------------------------------------2019年5月主要变更记录-------------------------------------------------
+1、Printer模块
+	printer4添加粗体模式下打印点的客诉点(涉及Printer4,郑薛晴提交)
+	新增N550设置扫码LED指示灯节点值的用例(涉及DigLed4,朱少辉提交)
+2、WebView模块
+	新增Android涉及web权限测试的用例(涉及WebView1,朱少辉提交)
+3、Scan模块
+	新增doScanWithRawByte接口返回字节数组,直接返回原生数据接口,不对byte[]数据进行ASCII/UTF-8/GBK 3中编码格式转换(涉及Scan25,朱少辉提交)
+4、SysTest模块
+	打印压力新增X5打印完票据后切刀的压力测试、打印填充单循环到缺纸后打印票据的异常用例(涉及SysTest9,郑薛晴提交)
+	扫码综合测试性能添加从摄像头打开到扫码结束的性能测试，压力测试添加休眠唤醒后摄像头切换测试(涉及SysTest56,朱少辉提交)
+------------------------------------------------2019年4月主要变更记录-------------------------------------------------
+1、Sys模块
+	新增X5清除锁屏功能的案例（新增Sys6，朱少辉提交）
+	新增X5休眠广播监听测试案例（新增Sys7,朱少辉提交）
+------------------------------------------------2019年3月主要变更记录-------------------------------------------------
+1、Other模块
+	代码实现关机功能（新增other17，张鑫锯提交）
+	修改文件的传入方式,便于重复测试(涉及other15,朱少辉提交)
+	新增巴西固件白名单功能webview测试(涉及other16,朱少辉提交)
+	新增反射方式安装和卸载apk的测试用例(涉及other18,朱少辉提交)
+2、SystemConfig模块
+      新增setSystemSetting设置电源键长按，power_long_press_enable，默认为1，允许长按，设置0位屏蔽长按（涉及systemConfig54，张鑫锯提交）
+3、scan模块
+      增加softEngine接口测试(涉及scan23,张鑫锯提交)
+      新增获取scan是否烧写fuse（新增scan24，张鑫锯提交）
+4、Card模块
+	新增int NDK_IccSetConfig(EM_ICTYPE emIctype, EM_CFGTYPE emCfgtype, unsigned int cfgValue)接口(涉及card24,张鑫锯提交)
+5、Printer模块
+	新增一维码 二维码增加对齐方式测试,优化提示语; 打印图片指令和打印一维码二维码指令代码分割，方便测试; 修改”1d 50”的效果显示代码,修改设置跳隔指令代码;修改横向纵向移动单位增加换行打印，使纵向移动单位明显;修改设置跳隔需要加上09水平符号(涉及printer12,张鑫锯提交)
+	修改图片宽度大于384,可以打印出来(涉及printer3、printer10,张鑫锯提交)
+	新增打印纯黑和纯白图片，纯白图片不管阈值设置为多少，都打印全白；纯黑图片不管阈值设置为多少，都打印全黑(涉及printer3、printer10,张鑫锯提交)
+	修改打印宽度大于384应可按照384宽度正常打印(涉及printer14,郑薛晴提交)
+6、SysTest模块
+	增加异常测试，开机立即调用NDK_RfidPiccDetect，由于NDK_RfidPiccDetect调用该接口之前，未进行卡片类型设置（NDK_RifdPiccType），则报寻不到卡，返回-2012（未设置卡）,正常现象为，如果没有设置卡片类型，驱动会有默认卡类型  (涉及systest2,张鑫锯提交)
+	增加felica分类测试项(涉及SysTest模块,张鑫锯提交)
+	由于没有poynt newland.jar的设置休眠接口，所以休眠改成安卓原生接口设置(涉及systest5,张鑫锯提交)
+    SysTest55密钥相关，JNI部分已适配海外，(涉及SysTest55,郑薛晴提交)下`
+	新增V1.0.8aar包的纯蓝牙底座测试用例,(涉及systest85,王小钰提交)
+	根据V1.0.8aar包优化代码并新增取消配对信息蓝牙断开（全功能），配对后自动连接（所有底座）的case(涉及Systest模块,王小钰提交)
+	由于无线增强型和普通型没有区别 删除增强和普通选项(涉及systest7,张鑫锯提交)
+	全功能蓝牙底座代码优化 增加测试点(涉及systest74,郑薛晴提交)
+	修改当设置卡位M0卡时，增加寻卡操作，与M1一致(涉及systest101,张鑫锯提交)
+	新增最新的农行客诉复现的用例(涉及systest81,郑薛晴提交)
+7、Payment模块
+	添加ota升级删除文件操作(涉及payment3,郑薛晴提交)
+8、Psbc模块
+	新增测试后置 开启所有权限(涉及Psbc2,郑薛晴提交)
+9、UsbComm模块
+	新增case7:只传入一个字节0x6C,检验是否异常;新增case8:传入ASCII码所有字符,检验是否异常.(涉及usbcomm3,朱少辉提交)
+    usb串口添加ttyGS0和ttyUSBx, 添加setConfig的测试(涉及usbcomm9,郑薛晴提交)
+10、Sec模块
+	新增各种情况下mpos共享密钥表检测(涉及sec33,郑薛晴提交)
+	新增验证mpos共享密钥位置的测试用例(涉及sec34,郑薛晴提交)
+11、框架部分
+	取消FELICA2枚举,修改EM_PWR_MODE枚举,修改上电模式枚举值名称;增加felica选择项; m1卡支持事件机制;
+	提交新的NDK接口的jar和so;提交安卓原生串口的so;添加usbs新串口的jar包; 修改510的配置文件;
+	巴西白名单测试(webview)权限添加(AndroidManifest.xml); 安卓标准串口测试相关设置(Android.mk);增加安卓标准串口源文件(SerialPort.c、SerialPort.h);
+	添加Sec共享密钥表位置的重启测试(BootBroadcastReceiver.java) ;增加felica poll接口JniNdk.JNI_FelicaPoll(felicaParam2,UidBuf,UidLen); 射频卡增加八达通felica测试项
+12、其他
+	提交最新的蓝牙底座依赖工程,文件位于svn/testplatform/testool_JDK/src/BluetoothControl_1.0.8_3 (郑薛晴提交)    
+------------------------------------------------2019年2月主要变更记录-------------------------------------------------
+1、系统
+	Felica综合部分增加对八达通卡的支持(涉及DefaultFragment,张鑫锯提交)
+	SysTest2增加异常测试，重启之后直接寻卡应寻卡成功(涉及SysTest2,张鑫锯提交)
+2、Jni封装
+	新增NDK_FelicaPoll接口用于支持八达通卡(郑薛晴提交)	
+------------------------------------------------2019年1月主要变更记录-------------------------------------------------
+1、Other模块
+	新增读取以太网mac地址文件的测试用例(涉及Other15,朱少辉提交)
+2、AndroidPort模块
+	新增同时操作PINPAD和RS232串口的测试测试用例(涉及AndroidPort6,郑薛晴提交)
+	新增Android原生方式读写RS232串口(涉及AndroidPort7,朱少辉提交)
+3、UsbComm模块
+          新增open(String portName)和getPortName()接口去打开当前的串口和获取当前的串口字符串(涉及UsbComm9,郑薛晴提交)
+4、Sec模块
+         新增mpos在共享密钥存储变更的验证手段(涉及Sec33,郑薛晴提交)
+5、SysTest模块
+	Poynt设备不支持A、B卡的APDU操作，NDK_Iccrw接口替换为NDK_IccGetRandom,NDK_MagReadNormal替换为NDK_MagReadDetect(涉及DefaultFragment,张鑫锯提交)
+	Poynt不支持明文安装密钥，主密钥需要用母POS方式安装，原先综合部分的明文安装密钥修改为密文安装(涉及SysTest55,郑薛晴提交)
+	海外产品的KCV校验值修改为3字节(SysTest55,郑薛晴提交)
+	新增统一jar包的单通道蓝牙底座的测试案例(涉及SysTest85,王小钰提交)
+	新增八佰伴客服问题复现的测试用例(涉及SysTest86,朱少辉提交)
+6、框架部分
+	密码键盘适配之前的底部状态栏根据产品适配全部修改为根据底座虚拟按钮的高度适配，与机型无关(涉及PatternActivity,郑薛晴提交)
+7、Jni封装
+	新增Felica和M0卡的NDK_RfidFelicaPoll、NDK_RfidFelicaApdu、NDK_M0Read、NDK_M0Write、NDK_M0Authen、NDK_MifareActive接口封装(王小钰提交)
+	新增NDK_MagReadDetect、NDK_IccGetRandom接口封装(张鑫锯提交)
+------------------------------------------------2018年12月主要变更记录-------------------------------------------------
+1、SystemConfig模块
+     新增音量键唤醒“wakeup_system_enable”的测试用例(涉及SystemConfig54,郑薛晴提交)
+     新增getWakeUpSystemEnable音量键休眠唤醒的测试用例(新增SystemConfig59,郑薛晴提交)
+2、Sec模块
+     旧机型密钥安装在Android端还是K21端的判断(涉及MainActivity,王小钰提交)
+3、InstallApp模块
+     新增Android7.0平台以上原生显示方式安装Apk(新增InstallApp12,郑薛晴提交)
+4、SysTest模块
+  N700的综合扫码添加闪关灯和对焦灯的开关(涉及SysTest56,郑薛晴提交)
+     新增蓝牙底座波特率轮询通讯的测试用例(涉及SysTest62、SysTest74,王小钰提交)
+     新增Sec安装密钥和K21上下电的并发测试用例(涉及SysTest81,郑薛晴提交)
+     新增全功能底座的透传、绑定和解绑、补丁包的下载安装、获取POS信息、双通道并发压力等用例(涉及SysTest74,王小钰提交)
+     射频卡添加和M0和felica(涉及DefaultFragment,张鑫锯提交)
+     新增燕清提供的统一aar包的双通道蓝牙底座配置、功能、压力的测试用例(涉及SysTest83,郑薛晴提交)
+5、其他
+     新增物资管理的PC端程序(张鑫锯提交)
+------------------------------------------------2018年11月主要变更记录-------------------------------------------------
+1、SystemConfig模块
+     新增isStatusBarExpandable接口用于判断状态栏状态的测试用例（涉及SystemConfig57,王小钰提交）
+     新增setDateTimeSettingsDisplay接口用于控制系统设置中日期与时间菜单的显示与隐藏（涉及SystemConfig58,郑薛晴提交）
+  SystemConfig200随机用例添加新的测试接口到随机模块测试(涉及SystemConfig200,郑薛晴提交)
+2、SystemVersion模块
+     添加Android原生的各种版本获取的case（涉及SystemVersion1,,郑薛晴提交）
+  SystemVersion的随机模块测试，添加了Android原生的各种版本获取到随机测试中去（涉及SystemVesion200,郑薛晴提交 ）
+3、Printer模块
+     添加setBluetoothCmdCollectEnable接口用于控制打印数据是否保存到数据库的功能(涉及Printer12,张鑫锯提交)
+     新增PrintPngFile接口用于替换原先的Png_Pint接口打印PNG图片(涉及Printer14,张鑫锯提交)
+4、Install模块
+    新增阿里固件disableAPK和getAPKDisableState接口用于设置/获取应用卸载黑名单的功能（涉及InstallApp10，王小钰提交）
+    新增验签库验签应用安装的测试用例（新增InstallApp11,朱少辉提交）
+5、Others模块
+     新增IC授权应用跳转的测试用例（新增Other12，郑薛晴提交）
+6、SysTest模块
+  BLE的综合测试用例优化，可在当前界面选择写、读特征值
+    根据外部客诉，双通道底座新增POS重启回连压力和底座断电-上电压力用例(涉及Systest62,王小钰提交)
+7、框架部分
+    添加64位的so的目录libs/arm64-v8a，更新SVN上的《JDK生成测试so的步骤.doc》
+    删除原先Gui类的cls_show_msg1(int time,int serial,String msg,Object ...args)方法，全部替换为
+  cls_show_msg1_record方法，让单元的出错写入文件操作跟综合模块一样带有时间，用例名，方法名
+------------------------------------------------2018年10主要变更记录-------------------------------------------------
+1、Android模块
+   新增CPOS X5双屏异显的测试用例（涉及Android29，王小钰提交）
+   添加多种音频播放方式（涉及Android30，郑薛晴提交）
+2、Other模块
+   模拟白机：增加删除除了newland目录下的factory之外的所有文件的测试用例（涉及Other13，张鑫锯提交）
+3、Printer模块
+    新增X5打印的NDK_PrnCutterInit接口的测试用例（涉及Printer13，王小钰提交）
+4、AndroidPort模块
+   新增open(port)接口用于辨别新、旧RS232串口，适配整个AndroidPort模块（郑薛晴提交）
+5、SysTest模块
+   扫码性能模拟银商招标增加camera新旧API打开摄像头速率和关闭摄像头速率（涉及SysTest56,张鑫锯提交）
+   兼容CPOS X5高平台wifi无法对自身创建连接的wifi进行更新修改删除等问题（涉及SysTest4,张鑫锯提交）
+   新增N910 wifi底座绑定和解绑功能（涉及SysTest74,王小钰提交）
+6、框架部分
+  添加打印事件机制的标志位，用于辨别X5支持打印模块但不支持打印事件机制的功能
+ 
+------------------------------------------------2018年8月、9月主要变更记录---------------------------------------------
+1、Scan模块
+   扫码模块适配N910_P、N550机型（涉及Scan模块，郑薛晴提交）
+2、VirtualCom模块
+   新增VirtualCom模块用于N910_P的USB串口测试（涉及VirtualCom模块，郑薛晴提交）
+3、Payment模块
+   OTA包名不匹配时返回-102而非-100（涉及Payment3，王小钰提交）
+   添加自更新开关控制的测试（涉及Payment4，张鑫锯提交）
+4、SystemConfig模块
+   Case修改：设置为null预期返回true（涉及SystemConfig30，王小钰提交）
+5、Android模块
+   新增android.icu.textDateFormat的测试用例（涉及Android16，郑薛晴提交）
+   新增快速定义图片的测试用例，X5才支持（涉及Android17，郑薛晴提交）
+   新增通知栏通知元数据、捆绑通知、直接回复的测试案例，X5才支持（涉及Android20，王小钰提交）
+   新增多语言支持的测试用例，X5才支持（涉及Android18，张鑫锯提交）
+   新增webview功能的测试案例，X5才支持（涉及Android19，张鑫锯提交）
+   新增辅助功能的测试案例，X5才支持（涉及Android21，张鑫锯提交）
+   新增确认凭证原生接口的测试案例，X5才支持（涉及Android23，王小钰提交）
+6、Printer模块
+   蓝牙打印新增76 30打印图片指令以及各国货币符号打印（涉及Printer12，张鑫锯提交）
+   X5专属打印接口测试用例，包含切刀、设置打印纸尺寸等（涉及Printer13，王小钰提交）
+7、Digled模块
+   添加N550的数码管显示相关测试用例（涉及Digled模块，郑薛晴提交）
+8、Other模块
+   统计信息添加获取应用电量统计、安全模块型号、国密芯片等（涉及Other7，张鑫锯提交）
+   添加PDF渲染成位图的测试用例（涉及Other10，郑薛晴提交）
+   新增黑名单IP的测试用例（涉及Other11，陈春妹提交）
+9、NFC模块
+   NFC模块对身份证的判断放宽松（涉及NFC模块，郑薛晴提交）
+10、K21Sys模块
+   新增文件存储从K21到Android端的生产指令测试用例（涉及K21Sys13，郑薛晴提交）
+   NDK_SysGetCapability的szCap[7]用于判断是否支持密码键盘（涉及K21Sys10，王小钰提交）
+11、PSBC模块
+   新增邮储白名单的测试用例（涉及Psbc5，王小钰提交）
+12、Sec模块
+   添加mpos的共享密钥表在擦除密钥和清安全寄存器会自动安装TLK（涉及Sec32，郑薛晴提交）
+13、InstallApp模块
+   新case测试：Sdk服务有权卸载白名单中的apk，应卸载成功（涉及InstallApp9，王小钰提交）
+14、SysTest模块
+   Wifi底座添加回连功能（涉及SysTest74，郑薛晴提交）
+   共享密钥表擦除密钥后会自动安装TLK（涉及SysTest55，张鑫锯提交）
+   事件机制代码优化（涉及SysTest模块，王小钰提交）
+   修复综合部分4K的M1卡密钥用例设置错误问题（涉及SysTest2，张鑫锯提交）
+   以太网开关修改为手动提示测试人员开关（涉及SysTest38，张鑫锯提交）
+   自动化改造：支持smart卡多选，U盘、SD卡、TF卡多选，压力次数修改等（涉及SysTest模块，张鑫锯提交）
+   Sec添加CBC模式密钥安装（涉及SysTest55，郑薛晴提交）
+   Sec性能添加3DES密钥安装算法计算MAC的耗时性能（涉及SysTest55，王小钰提交）
+   Sec的自检密钥检测部分添加8、16、24字节的密钥安装和检测功能，密钥安装包括DES、SM4、AES算法，CBC模式（涉及SysTest55，郑薛晴提交）
+15、assets配置文件
+   添加N550机型的配置文件N550_module_list.xml（郑薛晴提交）
+   添加Pyont_P5的配置文件N910_HY_module_list.xml（郑薛晴提交）
+   N550和X5设备配置去除密码键盘相关测试用例号
+16、框架部分
+   X5的sd卡路径、U盘路径、tf卡路径区分其他机型（涉及MainActivity，张鑫锯提交）
+   摄像头Camera2替换过时的Camera方法（涉及UnitFragment，张鑫锯提交）
+   配置修改：Android的SDK平台大于25需要手动去设置配置热点（涉及Config，张鑫锯提交）
+   删除JNI_Rfid_M1Increment函数使用到的case（张鑫锯提交）
+
+------------------------------------------------2018年6月、7月主要变更记录---------------------------------------------
+1、InstallApp模块
+   显式、隐式安装Apk用例兼容海外版本（涉及InstallApp1、InstallApp2，王小钰提交）
+   新增江西农信/联通公司/招行验签体系隐式安装与卸载Apk的测试用例（IntallApp8，王小钰提交）
+   新增多线程安装Apk的测试用例（涉及InstallApp7，张鑫锯提交）
+   新增美团白名单测试用例（涉及InstallApp9，张鑫锯提交）
+2、Sec模块
+   新增NDK_SecGetKeyOwner接口的测试用例（涉及Sec29，王小钰提交）
+   区分新旧机型的密钥属主保存于K21或Android端的不同返回值的分支（涉及Sec26，王小钰提交）
+   新增_NDK_SecGetServKeyOwner和_NDK_SecGetMposKeyOwner接口的测试用例（涉及Sec30，郑薛晴提交）
+   新增N850在清安全和擦除密钥后会自动安装TLK的测试用例（涉及Sec31，张鑫锯提交）
+   Sec4添加tr31格式的主密钥（涉及Sec4，郑薛晴提交）
+3、Android模块
+   新增Android原生的BigInteger类和MathContext类接口测试用例（涉及Android12、Android13，王小钰提交）
+4、SystemConfig模块
+   新增backupAppData接口的测试用例（涉及SystemConfig55，郑薛晴提交）
+   修改setSettingLocales接口设置后因切换系统语言导致的activity被销毁的问题（涉及SystemConfig30，郑薛晴提交）
+5、Other模块
+   新增系统获取文件路径测试接口（涉及Other9，张鑫锯）
+   新增统计服务接口获取应用信息和电量的测试点（涉及Other7，薛斯斯提交）
+   新增开机动画和开机logo的测试用例（涉及Other5，郑薛晴提交）
+6、Psbc模块
+   新增获取服务版本号的测试用例（涉及Psbc2、Psbc4，郑薛晴提交）
+7、Payment模块
+   新增补丁级别列表获取的测试用例（涉及Payment5，王小钰提交）
+8、Printer模块
+   模拟自检打印流程复现打印失败后缓存异常的BUG（涉及Printer9，王小钰提交）
+   新增ttf脚本打印和ttf字库打印的测试用例（涉及Printer10，张鑫锯提交）
+   模拟蓝牙打印修改不同设备的蓝牙MAC（涉及Printer12，郑薛晴提交）
+9、SysTest模块
+   新增Mpos指令集memory卡读写、流程压力的case（涉及SysTest57，王小钰提交）
+   新增RS232串口外接扫描枪的测试用例（涉及SysTest79，王小钰提交）
+   新增Mpos与NDK方式密钥交叉，密钥互相安装、检测、删除等（涉及SysTest36，郑薛晴提交）
+   新增RS232串口外接密码键盘测试用例（涉及SysTest78，薛斯斯提交）
+   新增nio方式网络通讯（涉及SysTest76，张鑫锯提交）
+   模拟实际应用的测试用例添加银联云和快钱的支持（涉及SysTest75，薛斯斯提交）
+   新增签名板的测试用例（涉及SysTest82，薛斯斯提交）
+   安全部分新增SM4和AES密钥安装、检测、删除的case（涉及SysTest55，郑薛晴提交）
+   新增BLE模式蓝牙的综合用例（涉及SysTest80，郑薛晴提交）
+10、框架部分
+   N510不支持icc和mag，N700不支持print，在入口时根据机型设置好各个机型对K21模块的支持情况（涉及GlobalVariable、MainActivity、PatternActivity，王小钰提交）
+   JDK测试用例添加对Poynt_P5、N550设备的支持，各个用例对其进行适配（涉及ParuEnum、MainActivity、PatternActivity，薛斯斯提交）
+
+------------------------------------------------2018年4月、5月主要变更记录---------------------------------------------
+1、Scan模块
+   新增N700设备扫码setLED与setRedLED的测试用例（涉及Scan21，郑薛晴提交）
+2、NFC模块
+   新增Android4.4平台之前识读NFC卡的测试用例（涉及Nfc5，郑薛晴提交）
+3、AndroidPort模块
+   修改RS232串口read与write接口阻塞问题，改为读写串口另开线程（涉及AndroidPort模块，张鑫锯提交）
+4、打印模块
+   打印脚本增加打印字体样式默认为0的情况，复现应用反馈的默认样式打印错误的问题（涉及Printer3，王小钰提交）
+   新增Mpos指令集操作打印的测试用例（涉及Printer1，张鑫锯提交）
+5、原生接口模块
+   新增短信、拨号原生接口的测试用例（涉及Android1，王小钰提交）
+   新增sim卡信息原生接口的测试用例（涉及Android2，王小钰提交）
+   新增Camera原生接口的测试用例（涉及Android3，王小钰提交）
+   新增屏幕亮度原生接口的测试用例（涉及Android4，王小钰提交）
+   新增壁纸原生接口的测试用例（涉及Android5，王小钰提交）
+   新增休眠原生接口的测试用例（涉及Android6，王小钰提交）
+   新增声音原生接口的测试用例（涉及Android7，王小钰提交）
+   新增存储内容原生接口的测试用例（涉及Android8，王小钰提交）
+   新增应用获取原生接口的测试用例（涉及Android9，王小钰提交）
+   新增时间和日期原生接口的测试用例（涉及Android10，王小钰提交）
+   新增设备信息获取的原生接口的测试用例（涉及Android11，王小钰提交）
+6、K21Sys模块
+   新增NDK_szGetBuildingTime、NDK_szGetBuildingDate接口的测试用例（涉及K21Sys11，郑薛晴提交）
+   修改NDK_SysGetCapability用例，增加对打印机和非接模块是否支持的判断（涉及K21Sys10，郑薛晴提交）
+   新增Mpos指令集操作终端管理的测试用例（涉及K21Sys12，张鑫锯提交）
+7、SystemVersion模块
+   增加获取硬件配置码的测试用例（涉及SystemVersion10，郑薛晴提交）
+8、Auth模块
+   新增Mpos指令集读取设备信息的测试用例（涉及Auth3，郑薛晴提交）
+   新增Mpos指令集获取随机数的测试用例（涉及Auth4，郑薛晴提交）
+   新增Mpos指令集设备认证的测试用例（涉及Auth5，郑薛晴提交）
+9、Sec模块
+   新增Mpos指令集主密钥安装的测试用例（涉及Sec4，郑薛晴提交）
+   新增Mpos指令集工作密钥安装的测试用例（涉及Sec5，郑薛晴提交）
+   新增Mpos指令集密钥删除的测试用例（涉及Sec6，郑薛晴提交）
+   新增Mpos指令集MAC计算的测试用例（涉及Sec7，郑薛晴提交）
+   新增Mpos指令数据加密/解密的测试用例（涉及Sec8，郑薛晴提交）
+   新增Mpos指令集装载DUKPT的KSN和初始密钥的测试用例（涉及Sec9，郑薛晴提交）
+   新增Mpos指令集密码输入的测试用例（涉及Sec10，郑薛晴提交）
+
+10、Storage模块
+   新增Mpos指令集获取设备存储信息的测试用例（涉及Storage1，王小钰提交）
+11、Card模块
+   新增Mpos指令集获取磁条卡信息的测试用例（涉及Card17，王小钰提交）
+   新增Mpos指令集检测IC卡是否在位的测试用例（涉及Card18，薛斯斯提交）
+   新增Mpos指令集IC卡上电、下电的测试用例（涉及Card19，薛斯斯提交）
+   新增Mpos指令集IC卡通讯的测试用例（涉及Card20，薛斯斯提交）
+   新增Mpos指令集非接寻卡上电、下电、在位检测的测试用例（涉及Card21，薛斯斯提交）
+   新增Mpos指令集非接CPU卡通讯指令（涉及Card22，薛斯斯提交）
+11、Psbc模块
+   新增使用邮储厂商订制接口获取IMEI号（涉及Psbc1，郑薛晴提交）
+   新增使用邮储厂商订制接口进行系统设置参数管理、设备接口控制、应用静默安装卸载（涉及Psbc2，郑薛晴提交）
+   新增使用邮储厂商订制接口进行终端应用程序管理、清理应用缓存、Launcher控制（涉及Psbc3，郑薛晴提交）
+   新增使用邮储厂商订制接口进行蓝牙传输控制、系统升级、OTA版本获取（涉及Psbc4，王小钰提交）
+
+12、Other模块
+   模拟蓝牙打印支持逐条下发，不需要结束符并增加打印二维码（涉及Other5，张鑫锯提交）
+   增加PDF转图片的测试用例（涉及Other8，郑薛晴提交）
+   新机型的模拟蓝牙地址都修改为“00:01:02:03:0A:0B”（涉及Other5，张鑫锯提交）
+
+13、SysTest模块
+   M1卡跨扇区读写压力（涉及SysTest2，郑薛晴提交）
+   综合扫码增加扫码图片解析压力和性能（涉及SysTest56，张鑫锯提交）
+   打印票据增加一开始走纸与磁卡交叉的测试用例（涉及SysTest23、PrintUtil，张鑫锯提交）
+   打印综合部分增加Mpos指令集打印压力（涉及SysTest9，张鑫锯提交）
+   IC综合部分增加Mpos指令集流程、读写压力（涉及SysTest13，薛斯斯提交）
+   射频综合部分增加Mpos指令集流程压力、读写压力（涉及SysTest2，薛斯斯提交）
+   安全综合部分增加Mpos压力、性能、自检密钥检测的用例（涉及SysTest55，郑薛晴提交）
+
+14、框架部分
+   当运行测试用例有异常抛出的时候界面上予以Toast方式显示出来（涉及IntentActivity、ServiceActivity，张鑫锯提交）
+   N700和N850支持双SAM卡（涉及MainActivity，郑薛晴提交）
+   综合扫码释放部分添加N900_3G分支的release（涉及DefaultFragment，郑薛晴提交）
+   密码键盘坐标由原先的各个机型写死坐标方式修改为动态计算（涉及MainActivity、PatternActivity、BaseFragment，郑薛晴提交）
+   修改串口、MODEM、IC/SAM卡选择的硬编码方式（涉及Config、DefaultFragment，郑薛晴提交）
+
+------------------------------------------------2018年1月、2月、3月主要变更记录---------------------------------------------
+1、Printer模块：
+   打印模块增加新的打印测试数据（涉及printer模块，郑薛晴提交）
+   增加打印各个国家货币符号，包括但不限于伊朗、印度、欧元、英镑等符号（涉及Printer4，张鑫锯提交）
+2、Systest模快
+   Wifi底座新增多台wifi底座mac地址应各不相同异常测试（涉及Systest74，王小钰提交）
+   Wifi底座新增设置获取黑白名单功能、获取pos信息等新接口（涉及Systest74，薛斯斯、张鑫锯提交）
+   蓝牙底座双通道新增指示灯状态切换测试点（涉及Systest62，王小钰提交）
+   N900单通道蓝牙底座代码移到Systest42（涉及Systest62，王小钰提交）
+   Wifi底座新增WifiAp Socket通讯压力测试（涉及Systest74，张鑫锯提交）
+   SDK2.0兼容SDK3.0代码优化（涉及Systest模块，王小钰、张鑫锯提交）
+   优化蓝牙相关综合用例（涉及Systest蓝牙压力、蓝牙交叉，郑薛晴提交）
+   WiFi底座增加信道状态异常测试（涉及Systest74，郑薛晴提交）
+   新增pin压力测试函数新增（新增Systest77，张鑫锯提交）
+   增加综合模块用例说明（涉及Systest，郑薛晴提交）
+   无线综合新能测试，根据2G、3G、4G网络的不同测试不同数据量，2G测试2M，3G测试10M，4G发送20M（涉及Systest7，张鑫锯修改）
+   扫码增加自动化压力测试（涉及Systest56，薛斯斯提交）
+   漫游测试增加mac地址变化时，显示当前路由器mac地址（涉及Systest4，张鑫锯提交）
+   新增网络推送延迟测试用例（新增systest76，张鑫锯提交）
+3、BluetoothBase模块
+   Wifi底座新增单元测试用例（新增BluetoothBase模块和用例，薛斯斯、王小钰提交）
+4、SystemConfig模块：
+   SystmConfig模块内随机定期用例更新，增加setProductModel，setMenuKeyValue，setSystemSetting方法（涉及SystemConfig200，薛斯斯提交）
+   默认下拉状态栏增加蓝牙选项（涉及SystemConfig）
+   根据美团新需求，新增设置系统设置项的值，控制电源键的按键效果（新增SystemConfig54，郑薛晴提交）
+5、Battery模块：
+   根据陈程建议，N700的电压是3-4V与USB的电压是接近的，故判断到电池不在位的时，不显示电池状态信息（涉及Battery1，郑薛晴提交）
+6、SystemVerison模块：
+   增加判断固件是否支持硬件加速器功能测试（新增SystemVersion9，郑薛晴提交）
+   SystemVersion模块内随机定期用例更新，增加“是否支持硬件加速”的获取（涉及SystemVersion200，薛斯斯提交）
+7、Kconn模块
+   Kconn模块SDK2.0耗时操作由打印改为刷卡（涉及Kconn模块，郑薛晴提交）
+8、InstallApp模块
+   农行版本新增恢复出厂保留制定app、恢复出厂卸载指定app2个接口（新增intallApp3、intallApp4，张鑫锯提交）
+   农行版本新增恢复出厂设置卸载密钥接口（新增intallApp5，郑薛晴提交）
+   农行版本新增农行恢复出厂删除指定路径的文件接口、修改农行恢复出厂卸载指定的app接口（涉及installApp4、新增installApp6，王小钰提交）
+9、Battery模块
+   根据长威建议增加了USB线充电的case（涉及Battery1,郑薛晴提交）
+   Battery模块内随机定期用例更新（涉及Battery200，王小钰提交）
+10、Other模块
+   增加显示伊朗、印度、欧洲等国家文字显示（涉及Other1，张鑫锯提交）
+11、Net模块
+   修改wifi探针sim卡问题（涉及Net3，郑薛晴提交）
+12、Payment模块
+   新增OTA升级测试用例（新增Payment3，郑薛晴提交）
+   新增增加删除白名单公钥测试用例（新增Payment4，郑薛晴提交）
+13、K21Sys模块
+   新增对外卡测试用例的支持（新增K21Sys10，郑薛晴提交）
+14、Sec模块
+   新增Jni_SecLoadDukptKey接口测试用例（新增sec28，张鑫锯提交）
+15、DNS模块
+   新增DNS模块，新增DNS测试用例（新增DNS1，郑薛晴提交）
+16、Scan模块
+   新增硬解码制支持用例（新增Scan19，薛斯斯提交）
+17、框架修改
+   解决测试apk后台运行长时间会被系统回收问题，把用例运行保护在前台服务中，提高优先级（新增ServerActivity，张鑫锯提交）
+   优化testtool_NDK进入后退出，再次进入出现空白问题（涉及ServiceActivity，张鑫锯提交）
+   Kb模块用例删除（涉及Kb文件夹，张鑫锯提交）
+   Xml文件增加Type节点，用于判断当前测试走SDK2.0还是SDK3.0（涉及module_list.xml，王小钰提交）
+   while true等待循环内增加休眠100ms（涉及Gui、DefaulFragment、UnitFagment，郑薛晴、张鑫锯提交）
+   蓝牙搜索改成搜索完毕再显示列表（涉及BluetoothManager、Config，张鑫锯提交）
+   根据多种机具支持模块excel表格完善xml文件（涉及module_list.xml，张鑫锯提交）
+   增加N700、X5用例配置文件（涉及N700_module_list.xml、X5_module_list.xml，郑薛晴提交）
+   newland.jar包替换成有客户识别码的jar包（涉及newland.jar，郑薛晴提交）
+   射频相关代码新增ISO15693分支，卡类型新增ISO15693（涉及DefaultFragment、ParaEnum，王小钰提交）
+   增加N920、N850机型配置文件（涉及N920dule_list.xml、N850dule_list.xml郑薛晴提交）
+
+JNI工程变更记录（JniNDK.jar、libLoadTIK.so）
+1、新增射频接口NDK_RfidPiccResetCard(uchar ucDelayms)封装（涉及jni_usePosNDK.c、JniNdk.java，王小钰提交）
+2、ISO15693协议接口封装（涉及jni_usePosNDK.c、JniNdk.java，王小钰提交）
+3、提交外卡的接口封装（涉及jni_usePosNDK.c、JniNdk.java，郑薛晴提交）
+4、新增NDK_SecLoadDukptKey接口封装（涉及jni_usePosNDK.c、JniNdk.java，郑薛晴提交）
+
+------------------------------------------------2017年12月主要变更记录---------------------------------------------
+1、Printer模块
+   新增打印PNG图片的测试数据与测试用例（涉及Printer3，郑薛晴提交）
+   新增Png_Pint以及setyu接口的测试用例（新增Printer7，郑薛晴提交）
+   新增对图片宽度>384过大的测试，手动设置图片阈值的测试点（涉及Printer7，郑薛晴提交）
+2、Other模块
+   新增BigDecimal类的相关测试用例（新增Other6，郑薛晴提交）
+   蓝牙模拟打印新增jpg和bmp图片的测试点（涉及Other5，张鑫锯提交）
+   获取设备各种服务的信息getDeviceStatisticsInfo接口（包括电池电量，开关机次数，非接打开次数，安全攻击次数等）（新增Other7，郑薛晴提交）
+3、Net模块
+   Wifi探针增加wifi探针总开关（setGlobalMonitor、getGlobalMonitor），用例增加wifi探针总开关接口、功能测试以及各种使用场景的功耗测试点（涉及Net3，张鑫锯提交）
+4、SystemVersion模块
+   增加客户识别码的测试点（NlBuild.CUSTOMER_ID），用于区分当前客户是银商、建行、农行、SDK2.0、SDK3.0、拉卡拉、海外、未知版本（涉及SystemVersion1，郑薛晴提交）
+   新增固件是否支持wifi探针功能的测试点(sys.epay.wifiprobe)（涉及SystemVersion8，郑薛晴提交）
+5、SystemConfig模块
+   根据用例组反馈修改未插入sim卡仍可以进行下拉状态栏测试的功能；下拉状态栏增加系统设置的选项(setting)（涉及SystemConfig24，郑薛晴提交）
+   新增关闭wifi仍可获取wifi的MAC地址的测试点（涉及SystemConfig23，郑薛晴提交）
+   增加setMenuKey接口的测试用例，Menu键可设置为Menu、音量加、音量键、Switch Key(新增SystemConfig53，郑薛晴提交)
+6、SysTest模块
+   新增wifi探针的综合测试用例，包括wifi探针对手机兼容性测试，健壮性测试（新增SysTest13，郑薛晴提交）
+   优化Wifi扫描性能代码（涉及SysTest4，张鑫锯提交）
+   修改打印部分的性能值采集，将性能值数据只保留小数点后两位（涉及SysTest9，郑薛晴提交）
+   根据用例组反馈，AP静态连接没有连上也返回连接成功，增加静态连接判断是否返回成功（涉及Layer，张鑫锯提交）
+   修改AP信号强度的平均值记录在result.txt中（涉及SysTest4，王小钰提交）
+   根据用例组需求，增加检查某密钥索引主密钥以及工作密钥是否存在的测试点（涉及SysTest55，郑薛晴提交）
+   解决按键声音排除异常问题（涉及SysTest100、SysTest101，张鑫锯提交）
+   模拟实际支付应用非接卡交易流程、读卡器流程（新增SysTest75，郑薛晴提交）
+7、框架修改
+   BpsBean里面的无关字段分别提出到ModemBean和WifiApBean （涉及BpsBean，张鑫锯提交）
+   去掉xml界面的退出测试和开关闪光灯2个按钮，退出按钮和停止扫码按钮用长按【取消】和【确认】键代替（涉及BaseFragment，张鑫锯提交）
+   按钮增加声音的素材（涉及BaseFragment，张鑫锯提交）
+   IntentActivity和BaseActivity增加某个用例被屏蔽抛出异常的Toast提示（涉及IntentActivity、BaseActivity，张鑫锯提交）
+   Gui增加了通过模拟键盘输入按键值的方式（涉及Gui，郑薛晴提交）
+   原有的系统对话框替换为自定义对话框，优化代码（涉及ShowDialog，张鑫锯提交）
+
+JNI工程变更记录：（JniNDK.jar、libLoadTlk.so）
+1、增加打印的3个JNI封装的接口（JNI_Print_Png、JNI_Print_Setyu、JNI_PrnInit）（涉及jni_usePosNDK.c、JniNdk.java郑薛晴提交）
+2、修改JNI_Sec_GetKcv的JNI接口（涉及jni_usePosNDK.c，郑薛晴提交）
+
+------------------------------------------------2017年11月主要变更记录---------------------------------------------
+1、SystemVersion模块：
+   新增液晶型号等节点信息的获取（新增SystemVersion7 ，薛斯斯提交）
+2、Net模块
+   补充获取SIM卡的iccid的测试点（涉及Net1，薛斯斯提交）
+   增加wifi探针测试用例（新增Net3，张鑫锯提交）
+   新增Wifi探针实际场景测试（涉及Net3，张鑫锯提交）
+3、SysTest模块
+   浅并发交叉增加密码键盘能获取输入到*号（涉及SysTest100，薛斯斯提交）
+   深并发交叉实现可多事件注册，过程中退出线程可正常停止（涉及Systest101，王小钰提交）
+   Systest75的用例问题已通过Systest101用例复现，故删除改用例（涉及Systest75，郑薛晴提交）
+   射频卡读写压力提示界面显示停留时间改为100ms（涉及SysTest2，郑薛晴提交）
+   射频卡压力测试成功失败几次结果增加某种类型的卡成功失败提示（涉及SysTest2，张鑫锯提交）
+   Wifi压力测试增加第几次失败提示（涉及systest4，张鑫锯提交）
+   无线性能测试改成10M单向通讯（涉及SysTest2，张鑫锯提交）
+   Wifi性能测试改成10M单向通讯（涉及SysTest4，张鑫锯提交）
+   Wifi性能增加扫描、连接、删除记录、断开、关闭性能时间计算（涉及SysTest4，张鑫锯提交）
+   安全性能补充16、24字节加密（涉及Systest55，薛斯斯提交）
+   扫描流程压力修改（涉及SysTest56，郑薛晴提交）
+4、scan模块
+   复现surfaceview宽比长大时会取到前一次扫码数据的bug（新增scan18，郑薛晴提交）
+   修改zxing扫码返回值（涉及Scan18，郑薛晴提交）
+5、Other模块
+   新增蓝牙打印测试用例（新增Other5，张鑫锯提交）
+6、Battery模块
+   新增获取纽扣电池电压测试用例（新增battery3，郑薛晴提交）
+   增加获取适配器的值（新增battery4，郑薛晴提交）
+7、Sec模块
+   新增计算dukpt密钥值的正确与否，使用计算mac方式校验测试点（涉及sec20，王小钰提交）
+   增加对dukpt的密钥的校验（涉及sec20，郑薛晴提交）
+   增加kcvInfo信息（涉及sec模块，郑薛晴提交）
+   增加密钥保存在K21端多次删除密钥会包密钥存在的错误测试点（涉及sec26，郑薛晴提交）
+   密码键盘测试用例大部分改为非阻塞方式（涉及Sec24、Sec27，薛斯斯提交）
+8、Printer模块
+   变更打印图片路径为/mnt/sdcard（涉及printer3，郑薛晴提交）
+9、InstallApp模块
+   新增bootload版本号区别国内版本和海外版本（涉及InstallApp2，王小钰提交）
+10、SystenConfig
+    修改下拉状态栏设置后无需重启（涉及Systemconfig24,张鑫锯提交）
+11、其他
+   显示提示新增ms s单位的设置（涉及Gui，郑薛晴提交）
+   修改jar包的注册注销接口（涉及JniNDK，郑薛晴提交）
+   新增射频卡获取ATQA和ATQB的长度和内容（涉及ISOUtils，郑薛晴提交）
+   增加并发任务的枚举值（涉及ParaEnum，薛斯斯提交）
+   增加打印ums文件复制（涉及PatternActivity，郑薛晴提交）
+   测试文件拷贝动作通过代码控制（涉及PatternActivity，郑薛晴提交）
+   增加wifi连接密码超过63位的处理（涉及WifiUtils，张鑫锯提交）
+   修改libLoadTIK 解决射频卡激活失败的问题（涉及so，郑薛晴提交）
+   修正激活返回-10000的问题（涉及so，郑薛晴提交）
+   深并发中代表模块的枚举加上获取int值（涉及ParaEnum，王小钰提交）
+   修改矩形宽的大小用于扫码测试（涉及CalRect，郑薛晴提交）
+   Wifi增加自动扫描操作（涉及WifiPara、WifiUtils等，郑薛晴提交）
+
+
+JNI工程变更记录：
+1、初始导入JNI封装的全部NDK接口（郑薛晴提交）
+2、ISO15693协议Java层对应C的结构体（涉及ISO15693ArgT.java、ISO15693MemBlock.java、ISO15693ProxCard.java、ISO15693SysInfo.java，郑薛晴提交）
+3、ISO15693协议JNI层封装的接口代码（涉及jni_usePosNDK.C,郑薛晴提交）
+4、JNI层：事件机制注册释放全局变量，防止内存溢出（涉及jni_usePosNDK.c，王小钰提交）
+5、JNI层：优化代码，可支持注册多个事件（jni_usePosNDK.c,王小钰提交）
+6、JAVA层：ISO15693协议接口变化，JAVA层对结构体的封装的修改（涉及ISO15693MemBlock.java、ISO15693ProxCard.java、ISO15693SysInfo.java、JNINDK.java，郑薛晴提交）
+7、JNI层：增加了固件找不到对应接口的出错显示日志（涉及posNDK.c，郑薛晴提交）
+8、JNI层：修改NDK_Sec_GetPinResult的JNI封装，不使用strlen获取返回长度（涉及jni_usePosNDK.c，薛斯斯提交）
+9、JNI层：ISO15693接口代码优化，对返回值进行处理（涉及jni_usePosNDK.c，王小钰提交）
+
+------------------------------------------------2017年8月主要变更记录---------------------------------------------
+1、Battery模块
+   修改电池电量百分比计算错误的问题以及原先充电方式为（AC，圆孔）修改为AC（涉及Battery1、ReceiverTracker，郑薛晴提交）
+   Battery模块内随机测试（新增Battery3，王小钰提交）
+2、Card模块
+   针对SAM卡驱动6100返回异常新增了case（涉及Card6，王小钰提交）
+   删除旧Card模块，更新部分新代码（更新Card1-5、Card15，郑薛晴提交）
+3、Net模块
+   网络共存代码优化，加入解绑注册操作；jar暂未加入该接口，先注释（涉及Net2，王小钰提交）
+4、SysTest模块
+   网络共存深交叉中补充一个异常case：一直处于wifi通讯，需配合其他apk一起验证；jar暂未加入该接口，先注释（涉及SysTest34，王小钰提交）
+   扫码性能加提示间隔；将后置扫描头的解析框打开；机器人扫码景深测试修改一个标志位（涉及SysTest56，郑薛晴提交）
+   lcd测试代码增加几何测试，彩条测试，对比度测试；增加调节屏幕亮度功能（涉及SysTest15，郑薛晴提交）
+   更新systest，磁卡和IC卡已修改为jni方式（涉及整个SysTest模块,，郑薛晴提交）
+   安全测试用例提交；修改为JNI方式调用（增加SysTest55，郑薛晴提交）
+   打印交叉和综合替换成jni（涉及SysTest模块打印相关用例，张鑫锯提交）
+   增加图片打印（涉及SysTest9、PrintUtil，张鑫锯提交）
+   综合三界面卡，rtc用例修改提交（涉及Systest1、Systest14、Systest54，郑薛晴提交）
+   综合模块进行修改：memory和IC相关用例测试完毕（涉及systest3、systest24、systest4、systest57，郑薛晴提交）
+5、SystemVersion模块
+   新增获取TUSN接口（涉及SystemVersion1，王小钰）
+   SystemVersion模块内随机测试（新增SystemVersion7，薛斯斯提交）
+   删除SystemVersion2、更新SystemVersion5，郑薛晴提交
+6、Printer模块
+   新增的打印命令test_link（增加Printer6，张鑫锯提交）
+   打印单元换成jni（删除Printer1-2，更新Printer3-5，张鑫锯提交）
+7、Scan模块
+   Scan模块内随机测试（增加Scan18，薛斯斯提交）
+8、SystemConfig模块
+   更正测试后置（涉及SystemConfig12、SystemConfig33，薛斯斯提交）
+   SystemConfig模块内随机测试（增加SystemConfig53，薛斯斯提交）
+   设置和获取K21端时间测试用例修改为JNI方式调用（涉及Systemconfig7，郑薛晴提交）
+9、Key模块
+	Key模块内随机测试（新增Key3，王小钰提交）
+	key模块的代码修改，改为直接获取按键值给测试人员（涉及Key1、Key2，郑薛晴提交）
+10、Apn模块
+	Apn模块内随机测试（新增Apn5，王小钰提交）
+	增加异常case，removeApn方法的参数id=-1时，预期返回false（涉及Apn1,王小钰提交）
+11、Sec模块
+	新增case：获取TUSN号后，属主A，B进行加密无异常（涉及Sec16，王小钰提交）
+	sec模块全部修改为jni形式调用（删除Sec1-8、10、13、14，更新整个Sec模块，郑薛晴提交）
+12、UsbComm模块
+	UsbComm模块内随机测试（新增UsbComm8，薛斯斯提交）
+13、AndroidPort模块
+    AndroidPort模块内随机测试（新增AndroidPort6，王小钰提交）
+14、Asyn模块
+    Asyn模块内随机测试（新增Asyn13，王小钰提交）
+15、InstallApp模块
+    InstallApp模块内随机测试（新增InstallApp3，王小钰提交）
+16、PaymentPort模块
+    PaymentPort模块内随机测试（新增PaymentPort7，王小钰提交）
+17、Sdlc模块
+    Sdlc模块内随机测试（新增Sdlc14，薛斯斯提交）
+18、Other模块
+    添加获取应用启动测试信息用例other4（新增Other4,张鑫锯提交）
+19、Auth模块
+    删除旧Auth模块，更新部分新代码（更新Auth1、Auth2，郑薛晴提交）
+20、框架
+    修改jni的gui代码，解决无法访问全局变量的问题（涉及NDK.mk、gui.c，郑薛晴提交）
+    解决wifi中文连接不上问题（涉及Layer，张鑫锯提交）
+    Gui那边c调用java的显示界面，快选时添加退格功能；增加默认次数的显示（涉及Gui、Lib、BaseFragment、HandlerMsg，郑薛晴提交）
+    wifi连接后台服务器ip的方式修改为陈镇江建议的（涉及SocketUtil，郑薛晴提交）
+    新增jni封装的GetPosInfo接口中所需的枚举（涉及ParaEnum，郑薛晴提交）
+    增加封装jni的jar包和so文件；修改jar包的中文乱码问题（增加JniNDK.jar、libLoadTIK.so，郑薛晴提交）
+    添加打印相关枚举值（涉及ParaEnum、PrintUtil，张鑫锯提交）
+    lib包提交，删除对meSDK的依赖（涉及整libs文件夹，郑薛晴提交）
+    新增获取字符串字节长度的getWordCount（涉及Tools，郑薛晴提交）
+    涉及K21端的部分（射频、打印、安全等）修改为jni调用方式（涉及Card、Printer、Sec、Systest、SystemVersion、Auth模块，暂时删除Manage、Kb、Storage模块）
+    更新配置文件，增加老81的机型，以及根据不同的机型走不同的配置文件（删除module_list,增加各种机型配置文件，涉及asset文件夹，郑薛晴提交）
+
+-------------------------------2017年07月主要变更记录---------------------------------
+1.Systest模块
+   增加网络并存的交叉用例（涉及systest34，郑薛晴提交）
+   扫描 wifi列表前 清除所有wifi密码配置（涉及SysTest4，张鑫锯提交）
+   SD/U盘进行压力测试时增加异常处理机制（涉及SysTest12，张鑫锯提交）
+   增加扫码机器人测试功能（涉及Systest56，郑薛晴提交）
+2.Sys模块
+增加获取GPS位置信息的用例（涉及Sys5，张鑫锯提交）
+3、Battery模块
+   新增获取电池相关信息的用例（涉及battery1，郑薛晴提交）
+   新增各种电池充电类型的用例（涉及battery2，郑薛晴提交）
+4、Scan模块
+   针对N910 3G设备，修改其释放扫码接口的处理方式（涉及scan1-5，张鑫锯提交）
+5、NDK模块
+   增加WLAN与移动网络并存测试用例（涉及NDK2，郑薛晴提交）
+6、框架
+   增加jni封装NDK测试用例（涉及jni文件，郑薛晴提交）
+   
+-------------------------------2017年06月主要变更记录---------------------------------
+1、Print模块
+   修改脚本打印中的打印png图片和测试数据，增加打印缺纸检测的case（涉及Print3，郑薛晴提交）
+   新增打印各种格式图片（如jpg、png、bmp）的案例（涉及Print5，郑薛晴提交）
+2、SysTest模块
+   新增N910新蓝牙底座测试用例（涉及SysTest74，王小钰、张鑫锯提交）
+3、UsbComm模块
+   新增模拟串口FIONREAD和TCFLSH缓冲区操作的用例（涉及UsbComm7，王小钰提交）
+4、SystemConfig模块
+   新增配置产品型号（仅mtms有权限配置）用例（涉及SystemConfig52，王小钰提交）
+5、Nfc模块
+   Nfc异常操作之后增加下电动作（涉及Nfc4，郑薛晴提交）
+6、Sys模块
+   增加接收阿里开机广播的用例（涉及Sys4，郑薛晴提交）
+7、Card模块
+   由原先打开读卡器、射频卡、IC卡操作修改为只开启读卡器（涉及Card2，郑薛晴提交）
+   优化加密磁道测试用例（涉及Card3、Card4，郑薛晴提交）
+8、SystemVesion5
+    修改ksn和csn的设置与获取的代码（涉及SystemVersion5，郑薛晴提交）
+9、框架
+   改变原先的测试用例结构，添加了测试前置与测试后置，优化结构与代码（涉及整个HighPlatTest，郑薛晴提交）
+   修改输出报告的格式，可适应text格式（涉及Gui，张鑫锯提交）
+   针对IM81，补全自动化相关代码（涉及AndroidPort、Asyn、Payment、Sdlc模块，张鑫锯提交）
+   新增一些对testtool_ndk的封装函数（涉及部分Gui、lib，郑薛晴提交）
+   增加自动化配置文件的参数，实现可同时自动化测试U盘、内置SD卡、外置SD卡（涉及Config、ParaInit，张鑫锯提交）
+   增加自动化前安全触发的判断且将自动化测试结果报告独立出来（涉及Gui、GlobalVariable，张鑫锯提交）

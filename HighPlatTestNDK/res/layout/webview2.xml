@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.user.webview.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/blank"
+        android:layout_width="match_parent"
+        android:layout_height="124dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/weburl"
+            android:layout_width="286dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_toStartOf="@+id/searchurl"
+            android:imeOptions="actionSearch" />
+
+        <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_gravity="bottom"-->
+        <!--android:layout_marginStart="0dp"-->
+        <!--android:layout_marginBottom="9dp"-->
+        <!--android:text="当前白名单配置为百度和搜狗,其他任意地址均不能访问,点击按键可检验白名单内ipv4以及域名能否访问(预期为可以访问),白名单外地址请输入后点击check检验(预期为不能访问)" />-->
+
+        <Button
+            android:id="@+id/searchurl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/weburl"
+            android:layout_alignParentEnd="true"
+            android:text="Check" />
+
+        <Button
+            android:id="@+id/RdmIP"
+            android:layout_width="89dp"
+            android:layout_height="68dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="15dp"
+            android:text="检验上网ipv4地址" />
+
+        <Button
+            android:id="@+id/baidu"
+            android:layout_width="82dp"
+            android:layout_height="72dp"
+            android:layout_alignBaseline="@+id/RdmIP"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="82dp"
+            android:layout_marginEnd="127dp"
+            android:text="检验百度域名地址" />
+
+        <Button
+            android:id="@+id/OAIP"
+            android:layout_width="82dp"
+            android:layout_height="72dp"
+            android:layout_alignBaseline="@+id/RdmIP"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="78dp"
+            android:layout_marginEnd="211dp"
+            android:text="检验OAipv4地址" />
+
+        <Button
+            android:id="@+id/sogou"
+            android:layout_width="82dp"
+            android:layout_height="72dp"
+            android:layout_alignBaseline="@+id/RdmIP"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="72dp"
+            android:layout_marginEnd="294dp"
+            android:text="检验搜狗域名地址" />
+    </RelativeLayout>
+
+    <WebView
+        android:id="@+id/webshow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="20" />
+
+
+</LinearLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_green"
+    android:orientation="vertical" >
+
+    <RadioGroup
+        android:id="@+id/rg_config_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rd_camera_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="后置摄像头" />
+
+        <RadioButton
+            android:id="@+id/rd_camera_font"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="前置摄像头" />
+        
+        <RadioButton
+            android:id="@+id/rd_camera_external"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="支付扫描头" />
+        
+         <RadioButton
+            android:id="@+id/rd_camera_usb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="USB扫描头" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rg_upc_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rd_upc_open"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="附加码打开" />
+
+        <RadioButton
+            android:id="@+id/rd_upc_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="附加码关闭" />
+    </RadioGroup>
+
+
+</LinearLayout>

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_green"
+    >
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@android:color/white"
+	    android:orientation="vertical" >
+	     <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        >
+	        <TextView 
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:text="@string/tv_card_number"
+	            android:textSize="@dimen/text_size_20dp"
+	            />
+	        
+	        <EditText 
+	            android:id="@+id/et_card_number"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:inputType="number"
+	            android:text="10"
+	            android:maxLength="4"
+	            />
+    	</LinearLayout>
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        >
+	        <TextView 
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:text="@string/tv_test_times"
+	            android:textSize="@dimen/text_size_20dp"
+	            />
+	        
+	        <EditText 
+	            android:id="@+id/et_test_times"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:inputType="number"
+	            android:text="100"
+	            android:maxLength="4"
+	            />
+    	</LinearLayout>
+    
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:layout_gravity="center_vertical"
+	        >
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/tv_sel_track"
+	            android:layout_gravity="center_vertical"
+	            android:textSize="@dimen/text_size_20dp"
+	            /> 
+	        
+	        <RadioGroup
+	            android:id="@+id/group_mag_data"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" >
+	
+	            <RadioButton 
+	                android:id="@+id/rb_123_data"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/fix_TK123"
+	                />
+	            <RadioButton 
+	                android:id="@+id/rb_23_data"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/fix_TK23"
+	                android:checked="true"
+	                />
+	        </RadioGroup>
+	        
+	    </LinearLayout>
+	    
+	    <LinearLayout 
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:layout_gravity="center_vertical"
+	        >
+	        <TextView 
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/tv_sel_display"
+	            android:layout_gravity="center_vertical"
+	            android:textSize="@dimen/text_size_20dp"
+	            /> 
+	        
+	        <RadioGroup
+	            android:id="@+id/group_display"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal" >
+	
+	            <RadioButton 
+	                android:id="@+id/rb_display"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/fix_yes"
+	                />
+	            <RadioButton 
+	                android:id="@+id/rb_no_display"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/fix_no"
+	                android:checked="true"
+	                />
+	        </RadioGroup>
+	        
+	    </LinearLayout>
+        
+	    <LinearLayout 
+	        android:layout_marginTop="20dp"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+	        >
+	        <Button 
+	            android:id="@+id/btn_sure"
+	            style="@style/BtnTheme"
+	            android:layout_width="fill_parent"
+	            android:text="@string/btn_sure"
+	            />
+	   	</LinearLayout>
+	   	
+ 	</LinearLayout>
+ </ScrollView>

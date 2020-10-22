@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/et_ap_ssid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="SSID" />
+
+    <EditText
+        android:id="@+id/et_ap_pwd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="密码" />
+
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="17sp"
+        android:text="安全模式配置"
+        />
+    <RadioGroup
+        android:id="@+id/rg_ap_sec"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_sec_nopass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NOPASS" />
+
+        <RadioButton
+            android:id="@+id/rb_sec_wpa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="WPA" />
+
+        <RadioButton
+            android:id="@+id/rb_sec_wep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WEP" />
+    </RadioGroup>
+    
+    <RadioGroup
+        android:id="@+id/rg_ssid_broad"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_ssid_zero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="SSID广播开启" />
+
+        <RadioButton
+            android:id="@+id/rb_ssid_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SSID广播关闭" />
+    </RadioGroup> 
+    
+<!--    <Button 
+        android:id="@+id/btn_ap_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+     	android:text="@string/btn_sure"
+        />  -->
+
+</LinearLayout>

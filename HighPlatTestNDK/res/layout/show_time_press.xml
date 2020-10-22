@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   	android:background="@color/back_green"
+    android:orientation="vertical" >
+    
+    <LinearLayout 
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/img_show_time"
+            android:textSize="@dimen/text_size_20dp"
+            />
+        <EditText 
+            android:id="@+id/et_img_times"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="2"
+            />
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical"
+        >
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/tv_cross_times"
+            android:textSize="@dimen/text_size_20dp"
+            />
+        <EditText 
+            android:id="@+id/et_cross_times"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:maxLength="3"
+            />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/text_size_20dp"
+    android:layout_marginRight="@dimen/text_size_20dp"
+    android:background="@color/back_green"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/tv_ssid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="titile"
+        android:textSize="@dimen/text_size_30dp" />
+
+    <LinearLayout
+        android:id="@+id/lay_rb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/rb_read"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="读特征" />
+
+        <RadioButton
+            android:id="@+id/rb_write"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="写特征" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_sec_mod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="content"
+        android:textSize="@dimen/text_size_20dp" />
+
+</LinearLayout>

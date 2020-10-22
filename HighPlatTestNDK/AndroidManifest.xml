@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.highplattest"
+    android:versionCode="1"
+    android:versionName="2.0.02">
+  
+    
+
+    <!-- android:sharedUserId="android.uid.mtms" -->
+    <!-- android:sharedUserId="android.uid.system" -->
+    <uses-permission android:name="android.permission.SET_TIME"/>
+    <uses-permission android:name="android.permission.SET_TIME_ZONE"/>
+    <!-- 接收开启广播权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+ 	<!-- Webview使用权限 -->
+<!-- 	<uses-permission android:name="android.permission.ACCESS_WEBVIEW"/>  -->
+  <!-- 钱箱控制接口 -->
+ <uses-permission android:name="android.permission.MANAGE_NEWLAN_CASHBOX" /> 
+    <uses-permission android:name="android.permission.MANAGE_NEWLAND_CASHBOX" />
+ <!-- 使用情况访问权限 -->
+    <uses-permission android:name="android.permission.PACKAGE_USAGE_STATS" />
+    
+    <!-- Gps接口 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <!-- 读写权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+
+    <!-- 录音 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <!-- 照相机 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 广播 -->
+    <uses-permission android:name="com.example.permission.RECEIVE_MY_BROADCAST" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 蓝牙 -->
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />
+
+    <uses-feature
+        android:name="android.hardware.bluetooth_le"
+        android:required="true" />
+    <!-- 网络 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    
+    <uses-permission android:name="android.permission.NETWORK_SETTINGS" />
+    
+ 	<uses-permission android:name="android.permission.MANAGE_NEWLAND" /> 
+    <!-- <uses-permission android:name="android.permission.MANAGE_NEWLAND_MAGCARD"/> -->
+    <uses-permission android:name="android.permission.MANAGE_NEWLANDUART3" />
+    <uses-permission android:name="android.permission.MANAGE_ANALOG_SERIAL" />
+	<uses-permission android:name="android.permission.MANAGE_NEWLAND_VIRTUAL_COM"/>
+    <uses-permission android:name="android.permission.MANAGE_NEWLANDGPIO" />
+    <uses-permission android:name="android.permission.MANAGE_NEWLANDMODEM" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.LOCAL_MAC_ADDRESS" />
+    <!-- 移动网络 -->
+    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
+    <!-- 扫码 -->
+    <uses-permission android:name="android.permission.MANAGE_NEWLANDUART3" />
+    <!-- apn操作权限 -->
+    <uses-permission android:name="android.permission.WRITE_APN_SETTINGS" />
+    <!-- 杀死后台进程的权限 -->
+    <uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES" />
+    <!-- NFC的权限 -->
+    <uses-permission android:name="android.permission.NFC" />
+    <!-- 显示支付证书升级功能是否显示 权限 -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <!-- 获取应用启动次数 -->
+    <uses-permission android:name="android.permission.UPDATE_APP_OPS_STATS" />
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.DELETE_PACKAGES"/>
+    <!-- Psbc邮储专用固件所需系统权限 -->
+    <uses-permission android:name="android.permission.DELETE_CACHE_FILES"/>
+    <uses-permission android:name="android.permission.CLEAR_APP_USER_DATA"/>
+	<!-- 多媒体平台统计服务所需权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.BATTERY_STATS" />
+		<!-- 辅助功能权限 -->
+	<uses-permission android:name="android.permission.BIND_ACCESSIBILITY_SERVICE" />
+	<!-- 原生壁纸权限 -->
+	<uses-permission android:name = "android.permission.SET_WALLPAPER"/>
+	
+	<!-- 双屏异显 -->
+	 <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    
+    
+    <!--清除缓存权限  -->
+    <uses-permission android:name="android.permission.CLEAR_APP_CACHE"/>
+    
+    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS"/>
+    
+    <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW"/>
+    
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+	
+    <uses-feature
+        android:name="android.hardware.nfc"
+        android:required="true" />
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <!-- 配置仅搜狗域名和OAipv4在白名单内 -->
+<!--         <meta-data
+            android:name="ip_whitelist"
+            android:value="192.168.30.32/114.114.114.114" />
+        <meta-data
+            android:name="hostname_whitelist"
+            android:value="www.sogou.com" /> -->
+        
+        <!-- 配置仅百度域名和上网ipv4在白名单内 -->
+<!--         <meta-data
+            android:name="ip_whitelist"
+            android:value="192.168.254.251/114.114.114.114" />
+        <meta-data
+            android:name="hostname_whitelist"
+            android:value="www.baidu.com" /> -->
+        
+        <activity
+            android:name="com.example.highplattest.activity.PatternActivity"
+            android:configChanges="locale|keyboard|keyboardHidden|screenSize"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+         <activity android:name="com.example.highplattest.activity.WebViewActivity2" />
+          <activity android:name="com.example.highplattest.activity.WebViewActivity" />
+        <activity android:name="com.example.highplattest.activity.TestActivity" />
+        <activity android:name="com.example.highplattest.activity.CrossActivity" />
+        <activity android:name="com.example.highplattest.activity.TouchActivity" 
+				android:theme="@style/Transparent"/> 
+        <activity android:name="com.example.highplattest.activity.MainActivity" />
+        <activity android:name="com.example.highplattest.activity.CaseActivity" />
+        <activity android:name="com.example.highplattest.activity.BtBackActivity"/>
+        <activity android:name="com.example.highplattest.activity.SecTestActivity"/>
+        <activity android:name="com.example.highplattest.activity.WlanrebootActivity"></activity>
+        <activity android:name="com.example.highplattest.activity.Wlanreboot2Activity"></activity>
+        <activity android:name="com.example.highplattest.activity.M1rebootActivity"></activity>
+        <activity android:name="com.example.highplattest.activity.Touch2Activity"></activity>
+        <activity android:name="com.example.highplattest.activity.WebViewActivity3"></activity>
+        <!-- 添加 -->
+        <activity
+            android:name="com.example.highplattest.activity.IntentActivity"
+            android:launchMode="singleTop" >
+            <intent-filter>
+                <action android:name="android.nfc.action.TAG_DISCOVERED" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.nfc.action.NDEF_DISCOVERED" />
+
+                <data android:mimeType="mime/type" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.highplattest.bluetoothbase.BluetoothBase"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" >
+        </activity>
+       <!--Android7.1.1之后才支持，测试人员在测试以上的平台再打开  -->
+    <!--    <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.highplattest.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>  -->
+
+        <!-- 开机广播 -->
+        <receiver android:name="com.example.highplattest.main.tools.BootBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        
+       	<receiver android:name="com.example.highplattest.main.tools.WifiBootBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        
+       <receiver android:name="com.example.highplattest.main.tools.M1RebootBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver android:name="com.example.highplattest.main.tools.BootBroadcastReceiver">
+            <intent-filter >
+                <action android:name="android.intent.action.ACTION_SHUTDOWN"/>
+                <category android:name="android.intent.category.HOME"/>
+            </intent-filter>
+        </receiver>
+        
+        <!--Android199  -->
+        <receiver android:name="com.example.highplattest.android.Android199$ConnectReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        
+       <!-- 重启广播静态注册。A9需要动态注册，暂屏蔽 -->
+       <!-- <receiver android:name="com.example.highplattest.main.tools.BootBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
+            </intent-filter>
+        </receiver> -->
+
+
+        <!-- 智管家广播 -->
+        <receiver android:name="com.example.highplattest.main.tools.BootBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.custom.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name="com.example.highplattest.main.tools.SimBroadcastReceiver">
+            <intent-filter>
+                 <action android:name="android.intent.sim.locked"/>
+                <action android:name="android.intent.sim.locked.result"/>
+            </intent-filter>
+            
+        </receiver>
+
+        <!-- OTA升级广播 -->
+        <receiver android:name="com.example.highplattest.main.tools.OtaUpdateBroadcastReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.extra.ota.silent.installation.result" />
+            </intent-filter>
+        </receiver>
+        
+        <!-- 服务 -->
+        <service android:name="com.example.highplattest.activity.ServiceActivity" />
+        <service android:name="com.example.highplattest.service.FloatingButtonService"/>
+        
+       <service android:name="com.example.highplattest.main.tools.QuickSettingService"
+           android:label="用例定义"
+           android:icon="@drawable/ic_launcher"
+           android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+           <intent-filter >
+               <action android:name="android.service.quicksettings.action.QS_TILE"/>
+           </intent-filter>
+       </service>
+       
+       <service
+            android:name="com.example.highplattest.activity.AutoAccessibilityService"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_service_config" />
+        </service>
+           <!--蓝牙底座引入，不同的进程-->
+        <service
+            android:name="com.newland.NlBluetooth.service.BluetoothService"
+            android:exported="false"
+            android:process=":remote">
+            <intent-filter>
+                <action android:name="com.newland.NlBluetooth.service.Control" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

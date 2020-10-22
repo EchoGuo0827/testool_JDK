@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="common_bg">#f0f0f0</color>
+    <color name="transparent">#00000000</color>
+	<color name="white">#fff</color>
+	<color name="translucent">#9000</color>
+	
+	<color name="pb_timeout_bg">#a8a8a8</color>
+	
+	<color name="common_press_bg">#dddddd</color>
+	
+	    <!-- 标题 -->
+    <color name="title_bg">#e21e0d</color>
+	<color name="main_menu_item_press">#e5e5e5</color>
+	  <!-- 登陆 -->
+    <color name="login_title">#a5a5a5</color>
+    <color name="login_short_font">#000</color>
+    <color name="login_remember_font">#b9b9b9</color>
+    <color name="login_font">#fff</color>
+       <!-- 弹出窗口 -->
+    <color name="common_dialog_font">#fff</color>
+    <color name="common_dialog_btn_font">#fd3939</color>
+    <color name="common_dialog_btn_press_font">#fff</color>
+    <color name="back_green">#FFFFFF</color>
+    
+    <!-- 账单 -->
+    <color name="bill_list_diviver">#DCDCDC</color>
+    <color name="bill_list_card_no">#333</color>
+    <color name="bill_list_date">#a3a3a3</color>
+    <color name="bill_list_type">#a3a3a3</color>
+    <color name="bill_list_amount">#ee252e</color>
+    <color name="bill_list_top">#e21e0d</color>
+    <color name="bill_list_filter_line">#cdcdcd</color>
+    <color name="bill_list_filter_font">#333</color>
+    <color name="bill_list_filter_press_font">#fff</color>
+</resources>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_green"
+    >
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical" >
+     <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/TextViewTheme"
+                android:text="@string/tv_server_ip" />
+
+            <EditText
+                android:id="@+id/et_ip_address"
+                style="@style/ConfigEditTextTheme" 
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/TextViewTheme"
+                android:text="@string/tv_server_port" />
+
+            <EditText
+                android:id="@+id/et_port"
+                style="@style/ConfigEditTextTheme"
+                android:inputType="number"
+                android:maxLength="4" />
+        </LinearLayout> 
+
+</LinearLayout>
+</ScrollView>

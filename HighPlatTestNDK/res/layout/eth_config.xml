@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_green"
+    android:orientation="vertical" >
+
+
+    <ScrollView
+        android:id="@+id/lay_eth_wifi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    style="@style/TextViewTheme"
+                    android:layout_width="fill_parent"
+                    android:text="@string/tv_local_para" />
+
+                <RadioGroup
+                    android:id="@+id/group_network_data"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <RadioButton
+                        android:id="@+id/rb_trend"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fix_trend" />
+
+                    <RadioButton
+                        android:id="@+id/rb_static"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/fix_static" />
+                </RadioGroup>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/TextViewTheme"
+                        android:text="@string/tv_local_ip" />
+
+                    <EditText
+                        android:id="@+id/et_local_ip"
+                        style="@style/ConfigEditTextTheme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/TextViewTheme"
+                        android:text="@string/tv_local_mask" />
+
+                    <EditText
+                        android:id="@+id/et_local_mask"
+                        style="@style/ConfigEditTextTheme" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/TextViewTheme"
+                        android:text="@string/tv_local_gata" />
+
+                    <EditText
+                        android:id="@+id/et_local_gata"
+                        style="@style/ConfigEditTextTheme" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/TextViewTheme"
+            android:layout_width="fill_parent"
+            android:text="@string/tv_server_para" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/TextViewTheme"
+                android:text="@string/tv_server_ip" />
+
+            <EditText
+                android:id="@+id/et_server_ip"
+                style="@style/ConfigEditTextTheme" 
+                android:text="192.168.5.237"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/TextViewTheme"
+                android:text="@string/tv_server_port" />
+
+            <EditText
+                android:id="@+id/et_server_port"
+                style="@style/ConfigEditTextTheme"
+                android:inputType="number"
+                android:text="3456"
+                android:maxLength="4" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            style="@style/TextViewTheme"
+            android:layout_width="fill_parent"
+            android:text="@string/tv_trans_para" />
+
+        <RadioGroup
+            android:id="@+id/group_trans_data"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb_tcp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/fix_tcp" />
+
+            <RadioButton
+                android:id="@+id/rb_udp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fix_udp" />
+
+            <RadioButton
+                android:id="@+id/rb_ssl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/fix_ssl" />
+        </RadioGroup>
+    </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

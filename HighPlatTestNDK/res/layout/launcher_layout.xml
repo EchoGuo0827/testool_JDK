@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <CheckBox
+        android:id="@+id/cb_ordinary_launcher"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Ordinary Launcher" />
+
+    <CheckBox
+        android:id="@+id/cb_mtms_launcher"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="MTMS Launcher" />
+
+    <CheckBox
+        android:id="@+id/cb_delay_launcher"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Delay Launcher" />
+
+<!--     <CheckBox
+        android:id="@+id/cb_exception_launcher"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Exception Launcher" /> -->
+    
+     <CheckBox
+        android:id="@+id/cb_ordinary_1_launcher"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Ordinary_1 Launcher" />
+
+    <CheckBox
+        android:id="@+id/cb_mtms_1_launcher"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="MTMS_1 Launcher" />
+
+    <CheckBox
+        android:id="@+id/cb_delay_1_launcher"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Delay_1 Launcher" />
+
+<!--     <CheckBox
+        android:id="@+id/cb_exception_1_launcher"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="Exception_1 Launcher" /> -->
+
+</LinearLayout>
