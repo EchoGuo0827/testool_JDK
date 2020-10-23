@@ -1,7 +1,6 @@
 ﻿<foreground-list>
-    <!-- 类似IM81的硬件配置 -->
      <detection>
-		<type>SDK3</type>
+		<type>N850_ChinaUms</type>
 	</detection>
     
      <detection>

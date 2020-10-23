@@ -120,7 +120,7 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="N850_SDK3"
+        android:label="N850_ChinaUms"
         android:theme="@style/AppTheme">
         <!-- 配置仅搜狗域名和OAipv4在白名单内 -->
 <!--         <meta-data
@@ -141,7 +141,7 @@
         <activity
             android:name="com.example.highplattest.activity.PatternActivity"
             android:configChanges="locale|keyboard|keyboardHidden|screenSize"
-            android:label="@string/app_name" >
+            android:label="N850_ChinaUms" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -214,13 +214,6 @@
             <intent-filter >
                 <action android:name="android.intent.action.ACTION_SHUTDOWN"/>
                 <category android:name="android.intent.category.HOME"/>
-            </intent-filter>
-        </receiver>
-        
-        <!--Android199  -->
-        <receiver android:name="com.example.highplattest.android.Android199$ConnectReceiver" >
-            <intent-filter>
-                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
             </intent-filter>
         </receiver>
         
