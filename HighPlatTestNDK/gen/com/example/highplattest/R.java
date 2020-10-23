@@ -51,10 +51,6 @@ public final class R {
          */
         public static final int acquirer_menu_offset_91=0x7f070007;
         /**  Default screen margins, per the Android Design guidelines. 
-
-         Customize dimensions originally defined in res/values/dimens.xml (such as
-         screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
-    
          */
         public static final int activity_horizontal_margin=0x7f070000;
         public static final int activity_vertical_margin=0x7f070001;
@@ -2445,7 +2441,6 @@ public final class R {
         public static final int auth_close=0x7f090047;
         /** 蓝牙底座合法性认证  
 蓝牙底座合法性认证  
-蓝牙底座合法性认证  
          */
         public static final int auth_open=0x7f090046;
         public static final int btn_cancel=0x7f090009;
@@ -2457,7 +2452,6 @@ public final class R {
         public static final int btn_sure=0x7f09002e;
         /** 串口配置  
 串口配置  
-串口配置  
          */
         public static final int com_bps_choose=0x7f090037;
         public static final int config_link=0x7f09000a;
@@ -2466,7 +2460,6 @@ public final class R {
         public static final int dialog_permission_no=0x7f09005f;
         public static final int dialog_permission_ok=0x7f09005e;
         /**  双屏异显 
- 双屏异显 
          */
         public static final int dialog_permission_text=0x7f09005c;
         public static final int fix_TK123=0x7f090026;
@@ -2483,7 +2476,6 @@ public final class R {
         public static final int img_show_time=0x7f090032;
         /** 密码键盘  
 密码键盘  
-密码键盘  
          */
         public static final int inputPassWord=0x7f090038;
         public static final int landi_infix=0x7f090045;
@@ -2492,7 +2484,6 @@ public final class R {
         public static final int mdm_patch_type=0x7f090006;
         public static final int meituan=0x7f090041;
         /** 验签设置 
-验签设置 
 验签设置 
          */
         public static final int newland=0x7f09003f;
@@ -2506,7 +2497,6 @@ public final class R {
         public static final int read_uuid=0x7f090049;
         public static final int set_imei_num=0x7f09003d;
         /** 系统设置  
-系统设置  
 系统设置  
          */
         public static final int set_mac_addr=0x7f09003c;
@@ -2524,12 +2514,10 @@ public final class R {
         public static final int systest_rf_random_err=0x7f090059;
         public static final int systest_rf_time_succ=0x7f09005b;
         /**  界面中英文 SysTest模块 
- 界面中英文 SysTest模块 
          */
         public static final int systest_tip=0x7f09004e;
         public static final int testending=0x7f090062;
         /**  界面中英文切换显示 
- 界面中英文切换显示 
          */
         public static final int testing=0x7f090061;
         public static final int tv_card_number=0x7f09003e;
@@ -2554,7 +2542,6 @@ public final class R {
         public static final int tv_trans_para=0x7f09001b;
         /** wire的配置  
 wire的配置  
-wire的配置  
          */
         public static final int tv_wire_link_config=0x7f090033;
         public static final int tv_wire_local_APN=0x7f090034;
@@ -2569,7 +2556,6 @@ wire的配置
         public static final int usb_open_yes=0x7f09000e;
         public static final int usb_switch_message=0x7f09000b;
         /**  UUID提示语 
- UUID提示语 
  UUID提示语 
          */
         public static final int uuid_service=0x7f090048;

@@ -120,7 +120,7 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
-        android:label="N850_OverSea"
+        android:label="N850_SDK3"
         android:theme="@style/AppTheme">
         <!-- 配置仅搜狗域名和OAipv4在白名单内 -->
 <!--         <meta-data
