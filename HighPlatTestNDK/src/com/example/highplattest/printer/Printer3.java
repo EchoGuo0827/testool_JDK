@@ -138,6 +138,13 @@ public class Printer3 extends UnitFragment
 				return;
 		}
 	
+		// 打印专项BUG修复,切换回默认的TTF字库
+		if((printerResult=printUtil.print_byttfScript("!font DroidSansFallback.ttf\n"))!=NDK_OK)
+		{
+			gui.cls_show_msg1_record(fileName, funcName, gKeepTimeErr, "line %d:切换回默认的TTF字库失败(ret=%d)", Tools.getLineInfo(),printerResult);
+			return;
+		}
+		
 		// case1:进行各种中西文字体测试，用于测试字库，add by zhengxq
 		for (int i = 1; i <=PRN_HZ_FONT; i++) 
 		{
