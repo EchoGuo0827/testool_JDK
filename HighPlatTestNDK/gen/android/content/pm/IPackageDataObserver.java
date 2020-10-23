@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: F:\\AS_Project\\HighPlatTestNDK\\src\\android\\content\\pm\\IPackageDataObserver.aidl
+ * Original file: F:\\testool_JDK\\HighPlatTestNDK\\src\\android\\content\\pm\\IPackageDataObserver.aidl
  */
 package android.content.pm;
 /**

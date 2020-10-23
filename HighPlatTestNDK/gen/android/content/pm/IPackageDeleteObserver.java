@@ -1,6 +1,6 @@
 /*
  * This file is auto-generated.  DO NOT MODIFY.
- * Original file: F:\\AS_Project\\HighPlatTestNDK\\src\\android\\content\\pm\\IPackageDeleteObserver.aidl
+ * Original file: F:\\testool_JDK\\HighPlatTestNDK\\src\\android\\content\\pm\\IPackageDeleteObserver.aidl
  */
 package android.content.pm;
 /**
